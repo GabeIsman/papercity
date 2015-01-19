@@ -1,0 +1,63 @@
+body {
+  color: #fff;
+  background-color: #111;
+  font-family: arial;
+}
+
+#content-pane {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+p {
+  margin: 25px 0;
+}
+
+.intro-header {
+  font-size: 2em;
+  /* Maybe fix this with JS? */
+  height: 400px;
+  padding-top: 200px;
+  text-align: center;
+  width: 100%;
+}
+
+.pane {
+  background-color: #000;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 25px;
+  min-height: 800px;
+}
+
+.inner-pane {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.pane-header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+}
+
+#background {
+  background-image: url("../images/sticker.jpeg");
+  /*background-position: 0 -1130px;*/
+  background-size: 100%;
+  bottom: 0;
+  filter: brightness(65%);
+  -webkit-filter: brightness(65%);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
