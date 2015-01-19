@@ -4,16 +4,25 @@
     <title>Paper City</title>
     <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div id="content-pane">
+      <!-- Fixed content -->
       <div id="background"></div>
-
-      <!-- Body content goes here -->
+      <div id="top-nav">
+        <div class="nav-item logo">PAPER CITY</div>
+        <div class="nav-item">FILM</div>
+        <div class="nav-item">ABOUT</div>
+        <div class="nav-item">CURRICULUM</div>
+      </div>
       <header class="intro-header screen-height">
         <h1>Paper City</h1>
+        <div class="intro-sub-header">Your power will change the world</div>
       </header>
-      <div class="pane screen-height">
+
+      <!-- Body content goes here -->
+      <div class="title-page-spacer pane screen-height">
         <div class="inner-pane">
           <header class="pane-header">
             This is the title of a section
@@ -29,7 +38,6 @@
     </div>
 
     <!-- JS loaded here -->
-    <script src="javascript/jquery-1.11.2.js" type="text/javascript"></script>
-    <script src="javascript/index.js" type="text/javascript"></script>
+    <script data-main="javascript/index" src="javascript/require.js"></script>
   </body>
 </html>

@@ -1,7 +1,10 @@
-
-$(document).ready(function() {
-  console.log('js loaded');
-  // Load app here.
+require([
+  'jquery',
+  'underscore',
+  'scroller'
+], function($, _, Scroller) {
+  $(document).ready(function() {
+    var scroller = new Scroller();
+    scroller.start();
+  });
 });
-
-

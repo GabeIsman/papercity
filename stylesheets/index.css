@@ -1,7 +1,8 @@
 body {
   color: #fff;
   background-color: #111;
-  font-family: arial;
+  font-family: "Open Sans",arial,sans-serif;
+  max-width: 100%;
 }
 
 #content-pane {
@@ -14,12 +15,28 @@ p {
 }
 
 .intro-header {
+  transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
   font-size: 2em;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 800;
   /* Maybe fix this with JS? */
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 400px;
   padding-top: 200px;
   text-align: center;
+  text-transform: uppercase;
   width: 100%;
+  z-index: -1;
+}
+
+.intro-sub-header {
+  color: #ddd;
+  font-size: 0.6em;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 
 .pane {
@@ -28,6 +45,10 @@ p {
   width: 100%;
   padding: 50px 25px;
   min-height: 800px;
+}
+
+.title-page-spacer {
+  margin-top: 600px;
 }
 
 .inner-pane {
@@ -41,6 +62,42 @@ p {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+#top-nav {
+  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  opacity: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  clear: both;
+}
+
+.nav-item {
+  transition: color 0.25s linear;
+  -webkit-transition: color 0.2s linear;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  float: right;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #FFB728;
+}
+
+.nav-item.logo {
+  float: left;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {
