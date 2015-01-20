@@ -1,10 +1,8 @@
 require([
+  'router',
   'jquery',
-  'underscore',
-  'scroller'
-], function($, _, Scroller) {
-  $(document).ready(function() {
-    var scroller = new Scroller();
-    scroller.start();
-  });
+  'underscore'
+], function(Router) {
+  var router = new Router();
+  router.start();
 });
