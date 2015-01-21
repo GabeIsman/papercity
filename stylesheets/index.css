@@ -44,7 +44,6 @@ p {
   box-sizing: border-box;
   width: 100%;
   padding: 50px 25px;
-  min-height: 800px;
 }
 
 .title-page-spacer {
@@ -59,12 +58,14 @@ p {
 
 .pane-header {
   width: 100%;
+  color: #FFB728;
   text-align: center;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 #top-nav {
+  box-sizing: border-box;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
   opacity: 0;
@@ -77,6 +78,7 @@ p {
   font-weight: 300;
   text-transform: uppercase;
   clear: both;
+  padding: 0 10px;
 }
 
 .nav-item {
@@ -104,14 +106,13 @@ p {
 
 }
 
-#background {
+.background {
   background-image: url("../images/sticker.jpeg");
-  /*background-position: 0 -1130px;*/
   background-size: 100%;
   bottom: 0;
-  filter: brightness(65%);
+/*  filter: brightness(65%);
   -webkit-filter: brightness(65%);
-  left: 0;
+*/  left: 0;
   position: fixed;
   right: 0;
   top: 0;
