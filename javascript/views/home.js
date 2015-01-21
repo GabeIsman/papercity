@@ -1,21 +1,14 @@
 define(
   [
-    'scroller',
+    'text!views/home.html',
     'backbone'
-  ], function(Scroller) {
+  ], function(template) {
 
   var Home = Backbone.View.extend({
-    constructor: function() {
-      this.scroller = new Scroller();
-    },
 
     render: function() {
-      debugger;
+      $(this.el).html(template);
       return this;
-    },
-
-    enterDocument: function() {
-      this.scroller.start();
     },
 
     events: {},
