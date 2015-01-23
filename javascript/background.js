@@ -13,7 +13,7 @@ define(function() {
 
   BackgroundService.prototype.update = function() {
     var scrollTop = $(window).scrollTop();
-    if (Math.abs(this.lastScrollTop - scrollTop) < 100) {
+    if (Math.abs(this.lastScrollTop - scrollTop) < 50) {
       return;
     }
     this.lastScrollTop = scrollTop;
@@ -38,7 +38,10 @@ define(function() {
     if ($lastBackgroundImage) {
       $lastBackgroundImage.css('bottom', windowHeight + 'px');
     }
-
+    var $nextBackgroundImage = this.$backgrounds[this.$backgrounds.length - i - 2];
+    if ($nextBackgroundImage) {
+      $nextBackgroundImage.css('bottom', 0);
+    }
   };
 
   return BackgroundService;

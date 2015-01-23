@@ -29,6 +29,9 @@ define(function() {
       }
 
       this.currentView = view;
+
+      window.scroller.stop();
+      window.scroller.start();
     }, this));
   };
 

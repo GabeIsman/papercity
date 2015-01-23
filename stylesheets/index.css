@@ -25,7 +25,7 @@ p {
   top: 0;
   left: 0;
   height: 400px;
-  padding-top: 200px;
+  padding-top: 250px;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
@@ -79,6 +79,7 @@ p {
   text-transform: uppercase;
   clear: both;
   padding: 0 10px;
+  z-index: 100;
 }
 
 .nav-item {
@@ -102,10 +103,6 @@ p {
   font-weight: 800;
 }
 
-@media (max-width: 768px) {
-
-}
-
 .background {
   background-image: url("../images/sticker.jpeg");
   background-size: 100%;
@@ -119,3 +116,67 @@ p {
   z-index: -1;
 }
 
+.pane.image-pane {
+  padding: 0;
+}
+
+.image-container {
+  display: inline-block;
+  width: 49.5%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .image-container {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+  }
+}
+
+.caption {
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 0.6em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.image-container:hover > .caption {
+  font-size: 1em;
+  background-color: #000;
+}
+
+.social-media-links {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  font-size: 3em;
+  height: 60px;
+}
+
+.social-media-link {
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.social-media-link:visited {
+  color: #fff;
+}
+
+.social-media-link:hover {
+  color: #FFB728;
+}
