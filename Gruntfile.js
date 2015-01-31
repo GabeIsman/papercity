@@ -7,6 +7,8 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'stylesheets/scss',
           cssDir: 'stylesheets/css',
+          imagesDir: 'images',
+          fontsDir: 'fonts',
           outputStyle: 'expanded',
           force: true,
           noLineComments: true
@@ -16,6 +18,8 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'stylesheets/scss',
           cssDir: 'stylesheets/css',
+          imagesDir: 'papercity/images',
+          fontsDir: 'papercity/fonts',
           outputStyle: 'compressed',
           environment: 'production'
         }
