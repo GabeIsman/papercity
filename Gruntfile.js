@@ -25,16 +25,24 @@ module.exports = function(grunt) {
         }
       }
     },
+    jshint: {
+      all: ['javascript/**/*.js', 'Gruntfile.js', '!javascript/lib/**/*.js']
+    },
     watch: {
       scss: {
         files: 'stylesheets/scss/**/*.scss',
         tasks: ['compass:dev'],
+      },
+      js: {
+        files: ['javascript/**/*.js', 'Gruntfile.js'],
+        tasks: ['jshint']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.registerTask('default', ['compass:dev', 'watch']);
   grunt.registerTask('productionize', ['compass:prod']);
 };

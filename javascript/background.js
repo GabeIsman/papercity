@@ -26,7 +26,7 @@ define(function() {
       if (bottomPosition > 0) {
         break;
       }
-    };
+    }
 
     var $backgroundImage = this.$backgrounds[this.$backgrounds.length - i - 1];
     if (!$backgroundImage) {
@@ -45,4 +45,4 @@ define(function() {
   };
 
   return BackgroundService;
-})
+});

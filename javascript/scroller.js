@@ -13,7 +13,7 @@ define(
 
     Scroller.prototype.start = function() {
 
-      setTimeout(function() { $('#top-nav').css("opacity", 1) }, 500);
+      setTimeout(function() { $('#top-nav').css("opacity", 1); }, 500);
       this.$introHeader = $('.intro-header');
       this.$body = $('body');
       this.backgroundService = new BackgroundService();
@@ -31,7 +31,7 @@ define(
 
       this.backgroundService.update();
 
-      this.requestID = window.requestAnimationFrame(_.bind(this.animate, this))
+      this.requestID = window.requestAnimationFrame(_.bind(this.animate, this));
     };
 
     Scroller.prototype.updateTitle = _.throttle(function() {

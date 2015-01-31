@@ -11,7 +11,6 @@ define(
 
     events: {
       'click .nav-item': function(e) {
-        debugger;
         var href = $(e.target).data('href');
         window.pcRouter.navigate(href, {trigger: true});
       }

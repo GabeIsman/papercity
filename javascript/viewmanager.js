@@ -6,7 +6,7 @@ define(function() {
     // Aspirational.
     this.pastViews = [];
     this.currentView = null;
-    this.$contentEl;
+    this.$contentEl = null;
   };
 
   ViewManager.prototype.render = function(viewClass) {
@@ -15,7 +15,7 @@ define(function() {
         this.$contentEl = $('#content-pane');
       }
 
-      var view = new viewClass()
+      var view = new viewClass();
 
       this.$contentEl.html(view.render().el);
 

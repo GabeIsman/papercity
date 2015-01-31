@@ -10,8 +10,8 @@ define(
 
     var Router = Backbone.Router.extend({
       constructor: function(options) {
-        options || (options = {});
-        options.routes || (options.routes = {});
+        options = options || {};
+        options.routes = options.routes || {};
 
         this.viewManager = new ViewManager();
 

@@ -2492,6 +2492,10 @@ p {
   background-image: url('/images/teaching/summeracademy.jpg?1421820050');
 }
 
+.ciscff-image {
+  background-image: url('/images/festivals/ciscff.jpg?1421820018');
+}
+
 .pane.image-pane,
 .pane.info-pane {
   padding: 0;
