@@ -1,9 +1,17 @@
+require.config({
+  baseUrl: '/javascript/',
+  paths: {
+    text: 'lib/text',
+    backbone: 'lib/backbone'
+  }
+});
+
 require([
   'router',
   'views/navbar',
   'scroller',
-  'jquery',
-  'underscore',
+  'lib/jquery',
+  'lib/underscore',
   'text'
 ], function(Router, NavBar, Scroller) {
   // Replace this global with some kind of service-locator pattern maybe?
