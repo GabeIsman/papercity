@@ -2349,6 +2349,11 @@
   content: "";
 }
 
+/* Wasn't able to get this to convert to other formats properly. */
+@font-face {
+  font-family: 'United States';
+  src: url('/fonts/united-states.ttf?1422744679') format("truetype");
+}
 body {
   color: #fff;
   background-color: #111;
@@ -2369,7 +2374,6 @@ p {
   transition: opacity 0.2s linear;
   -webkit-transition: opacity 0.2s linear;
   font-size: 2em;
-  font-family: "Open Sans",sans-serif;
   font-weight: 800;
   /* Maybe fix this with JS? */
   position: fixed;
@@ -2450,6 +2454,7 @@ p {
 }
 
 .nav-item.logo {
+  font-family: "United States","Open sans",sans-serif;
   float: left;
   font-weight: 800;
 }
