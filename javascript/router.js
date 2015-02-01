@@ -4,7 +4,7 @@ define(
     'views/about',
     'views/curriculum',
     'viewmanager',
-    'lib/backbone',
+    'backbone',
   ],
   function(Home, About, Curriculum, ViewManager) {
 

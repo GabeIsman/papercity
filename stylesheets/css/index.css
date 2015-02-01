@@ -2352,7 +2352,7 @@
 /* Wasn't able to get this to convert to other formats properly. */
 @font-face {
   font-family: 'United States';
-  src: url('/fonts/united-states.ttf?1422744679') format("truetype");
+  src: url('/fonts/united-states.ttf?1422748493') format("truetype");
 }
 body {
   color: #fff;
@@ -2395,7 +2395,7 @@ p {
 }
 
 .pane {
-  background-color: #000;
+  background-color: #111;
   box-sizing: border-box;
   width: 100%;
   padding: 50px 25px;
@@ -2426,7 +2426,7 @@ p {
   opacity: 0;
   width: 100%;
   height: 60px;
-  background-color: #000;
+  background-color: #111;
   position: fixed;
   top: 0;
   left: 0;
@@ -2481,7 +2481,7 @@ p {
 }
 
 .paideia-image {
-  background-image: url('/images/teaching/paideiahs.jpg?1421820060');
+  background-image: url('/images/teaching/paideiahs.jpg?1422748493');
 }
 
 .bangobama-image {
@@ -2498,7 +2498,7 @@ p {
 
 .pane.image-pane,
 .pane.info-pane {
-  padding: 0;
+  padding: inherit 0;
 }
 
 .image-container {
@@ -2531,7 +2531,7 @@ p {
 
 .image-container:hover > .caption {
   font-size: 1em;
-  background-color: #000;
+  background-color: #111;
 }
 
 .social-media-links {
