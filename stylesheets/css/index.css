@@ -2354,74 +2354,9 @@
   font-family: 'United States';
   src: url('/fonts/united-states.ttf?1422748493') format("truetype");
 }
-body {
-  color: #fff;
-  background-color: #111;
-  font-family: "Open Sans",arial,sans-serif;
-  max-width: 100%;
-}
-
-#content-pane {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-p {
-  margin: 25px 0;
-}
-
-.intro-header {
-  -moz-transition: opacity 0.25s linear;
-  -o-transition: opacity 0.25s linear;
-  -webkit-transition: opacity 0.25s linear;
-  transition: opacity 0.25s linear;
-  font-size: 2em;
-  font-weight: 800;
-  /* Maybe fix this with JS? */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 400px;
-  padding-top: 250px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
-  z-index: -1;
-}
-
-.intro-sub-header {
-  color: #ddd;
-  font-size: 0.6em;
-  font-family: "Open Sans",sans-serif;
-  font-weight: 300;
-}
-
-.pane {
-  background-color: #111;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 50px 25px;
-}
-
-.title-page-spacer {
-  margin-top: 600px;
-}
-
-.inner-pane {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-}
-
-.pane-header {
-  width: 100%;
-  color: #FFB728;
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 300;
-}
-
 #top-nav {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -moz-transition: opacity 0.25s linear;
   -o-transition: opacity 0.25s linear;
@@ -2465,6 +2400,77 @@ p {
   font-weight: 800;
 }
 
+body {
+  color: #fff;
+  background-color: #111;
+  font-family: "Open Sans",arial,sans-serif;
+  max-width: 100%;
+}
+
+#content-pane {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+p {
+  margin: 25px 0;
+}
+
+.intro-header {
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  font-size: 2em;
+  font-weight: 800;
+  /* Maybe fix this with JS? */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 400px;
+  padding-top: 250px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: -1;
+}
+
+.intro-sub-header {
+  color: #ddd;
+  font-size: 0.6em;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 300;
+}
+
+.pane {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #111;
+  width: 100%;
+  padding: 50px 25px;
+}
+
+.title-page-spacer {
+  margin-top: 600px;
+}
+
+.inner-pane {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.pane-header {
+  width: 100%;
+  color: #FFB728;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
 .background {
   background-size: 100%;
   bottom: 0;
@@ -2476,70 +2482,6 @@ p {
   right: 0;
   top: 0;
   z-index: -1;
-}
-
-.sticker-image {
-  background-image: url('/images/sticker.jpeg?1421549028');
-}
-
-.success-image {
-  background-image: url('/images/teaching/success.jpeg?1421720280');
-}
-
-.paideia-image {
-  background-image: url('/images/teaching/paideiahs.jpg?1422748493');
-}
-
-.bangobama-image {
-  background-image: url('/images/bangobama.jpg?1421728003');
-}
-
-.summeracademy-image {
-  background-image: url('/images/teaching/summeracademy.jpg?1421820050');
-}
-
-.ciscff-image {
-  background-image: url('/images/festivals/ciscff.jpg?1421820018');
-}
-
-.pane.image-pane,
-.pane.info-pane {
-  padding: inherit 0;
-}
-
-.image-container {
-  display: inline-block;
-  width: 49.5%;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-@media (max-width: 900px) {
-  .image-container {
-    display: block;
-    width: 100%;
-    margin: 25px 0;
-  }
-}
-.caption {
-  -moz-transition: all 0.25s linear;
-  -o-transition: all 0.25s linear;
-  -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 0.6em;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.image-container:hover > .caption {
-  font-size: 1em;
-  background-color: #111;
 }
 
 .social-media-links {
@@ -2571,30 +2513,70 @@ p {
   color: #FFB728;
 }
 
-.info-viz {
-  text-align: center;
+.pane.image-pane,
+.pane.info-pane {
+  padding: inherit 0;
+}
+
+.image-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
-  margin: 100px 0;
-  width: 20%;
-  padding: 0 6.5%;
-  vertical-align: top;
+  width: 49.5%;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 900px) {
-  .info-viz {
+  .image-container {
     display: block;
-    width: 90%;
-    margin: 100px auto;
+    width: 100%;
+    margin: 25px 0;
   }
 }
-.info-centerpiece {
-  color: #39F2F2;
-  line-height: 150px;
-  font-size: 100px;
-  letter-spacing: -5px;
+.caption {
+  -moz-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 0.6em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.info-emph {
-  font-weight: bold;
-  color: #FFB728;
+.image-container:hover > .caption {
+  font-size: 1em;
+  background-color: #111;
+}
+
+.sticker-image {
+  background-image: url('/images/sticker.jpeg?1421549028');
+}
+
+.success-image {
+  background-image: url('/images/teaching/success.jpeg?1421720280');
+}
+
+.paideia-image {
+  background-image: url('/images/teaching/paideiahs.jpg?1422748493');
+}
+
+.bangobama-image {
+  background-image: url('/images/bangobama.jpg?1421728003');
+}
+
+.summeracademy-image {
+  background-image: url('/images/teaching/summeracademy.jpg?1421820050');
+}
+
+.ciscff-image {
+  background-image: url('/images/festivals/ciscff.jpg?1421820018');
 }
