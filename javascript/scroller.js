@@ -6,26 +6,29 @@ define(
   function(BackgroundService) {
 
     // AnimationService?
-    var Scroller = function() {
+    var ScrollService = function() {
       this.handleResize();
       $(window).resize(_.bind(this.handleResize, this));
     };
 
-    Scroller.prototype.start = function() {
-
+    ScrollService.prototype.start = function() {
       setTimeout(function() { $('#top-nav').css("opacity", 1); }, 500);
       this.$introHeader = $('.intro-header');
       this.$body = $('body');
       this.backgroundService = new BackgroundService();
+      this.scrollElements = _.map($('.scroll'), function(el) { return $(el); });
+      this.inViewElements = [];
+      this.outOfViewElements = this.scrollElements;
       this.requestID = window.requestAnimationFrame(_.bind(this.animate, this));
     };
 
-    Scroller.prototype.stop = function() {
+    ScrollService.prototype.stop = function() {
       window.cancelAnimationFrame(this.requestID);
     };
 
     // TODO: do something about mobile. Default state then turn off?
-    Scroller.prototype.animate = function() {
+    ScrollService.prototype.animate = function() {
+      this.updateInViewElements();
 
       this.updateTitle();
 
@@ -34,7 +37,7 @@ define(
       this.requestID = window.requestAnimationFrame(_.bind(this.animate, this));
     };
 
-    Scroller.prototype.updateTitle = _.throttle(function() {
+    ScrollService.prototype.updateTitle = _.throttle(function() {
       this.scrollTop = this.$body.scrollTop();
       if (this.scrollTop > this.windowHeight / 4) {
         if (this.$introHeader) {
@@ -47,9 +50,36 @@ define(
       }
     }, 100);
 
-    Scroller.prototype.handleResize = function() {
+    ScrollService.prototype.updateInViewElements = _.throttle(function() {
+      var scrollTop = $(window).scrollTop();
+      var newlyOutOfView = _.filter(this.inViewElements, function($el) {
+        return !isInView($el, scrollTop);
+      });
+      var newlyInView = _.filter(this.outOfViewElements, function($el) {
+        return isInView($el, scrollTop);
+      });
+      this.outOfViewElements = _.difference(this.outOfViewElements, newlyInView);
+      this.outOfViewElements = this.outOfViewElements.concat(newlyOutOfView);
+      this.inViewElements = _.difference(this.inViewElements, newlyOutOfView);
+      this.inViewElements = this.inViewElements.concat(newlyInView);
+      _.each(newlyOutOfView, function($el) {
+        $el.removeClass('inview');
+      });
+      _.each(newlyInView, function($el) {
+        $el.addClass('inview');
+      });
+    }, 250);
+
+    ScrollService.prototype.handleResize = function() {
       this.windowHeight = window.innerHeight;
     };
 
-    return Scroller;
+    function isInView($el, opt_scrollTop) {
+      var scrollTop = opt_scrollTop || $(window).scrollTop();
+      var scrollBottom = scrollTop + window.innerHeight;
+      var elTop = $el.offset().top;
+      return elTop < scrollBottom && elTop + $el.height() > scrollTop;
+    }
+
+    return ScrollService;
 });
