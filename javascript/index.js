@@ -3,7 +3,8 @@ require.config({
   paths: {
     text: 'lib/text',
     backbone: 'lib/backbone',
-    jquery: 'lib/jquery'
+    jquery: 'lib/jquery',
+    underscore: 'lib/underscore'
   }
 });
 
@@ -13,7 +14,7 @@ require([
   'views/footer',
   'scroller',
   'jquery',
-  'lib/underscore',
+  'underscore',
   'text'
 ], function(Router, NavBar, Footer, Scroller) {
   // Replace this global with some kind of service-locator pattern maybe?
