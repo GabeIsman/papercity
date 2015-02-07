@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/javascript/',
+  baseUrl: '/papercity/javascript/',
   paths: {
     text: 'lib/text',
     backbone: 'lib/backbone'
