@@ -2,7 +2,8 @@ require.config({
   baseUrl: '/papercity/javascript/',
   paths: {
     text: 'lib/text',
-    backbone: 'lib/backbone'
+    backbone: 'lib/backbone',
+    jquery: 'lib/jquery'
   }
 });
 
@@ -10,7 +11,7 @@ require([
   'router',
   'views/navbar',
   'scroller',
-  'lib/jquery',
+  'jquery',
   'lib/underscore',
   'text'
 ], function(Router, NavBar, Scroller) {
