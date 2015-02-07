@@ -25,6 +25,8 @@ require([
   $(document).ready(function() {
     var navBar = new NavBar();
     var footer = new Footer();
+    navBar.render();
+    footer.render();
     window.scroller.start();
   });
 });

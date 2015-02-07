@@ -5,7 +5,8 @@ define(
   var Footer = Backbone.View.extend({
     // constructor: function() {} - omitted - defaults to superclass constructor
     render: function() {
-      // Nothing to render - this is a decorated class.
+      // Give the rest of the page a chance to render before the footer.
+      setTimeout(_.bind(function() { $(this.el).css({ opacity: 1 }); }, this), 300);
       return this;
     },
 

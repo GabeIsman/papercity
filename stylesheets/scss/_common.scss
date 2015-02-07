@@ -165,6 +165,8 @@ p {
   text-align: center;
   padding: 50px 0;
   background-color: $secondaryBgColor;
+  /* Made visible by js after the rest of the page has rendered. */
+  opacity: 0;
 }
 
 .footer-link {
