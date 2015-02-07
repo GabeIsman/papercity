@@ -2614,6 +2614,10 @@ p {
   background-size: 100%;
 }
 
+.film-pane {
+  padding: 50px;
+}
+
 .film-watch-pane {
   position: relative;
   margin-top: 40px;
@@ -2625,8 +2629,6 @@ p {
   box-sizing: border-box;
   display: inline-block;
   width: 70%;
-  padding-right: 30px;
-  border-right: 1px solid #999;
 }
 
 .film-inner-container {
@@ -2655,8 +2657,8 @@ p {
   right: 0;
   top: 0;
   display: inline-block;
-  width: 29%;
-  padding-left: 30px;
+  width: 30%;
+  padding-left: 20px;
 }
 
 .chapters-header {
@@ -2670,15 +2672,25 @@ p {
 }
 
 .chapter {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px;
   position: relative;
   display: inline-block;
   float: left;
   vertical-align: top;
   width: 100%;
-  margin-top: 20px;
-  font-size: 11px;
-  max-height: 60px;
-  overflow-y: hidden;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.chapter:hover {
+  background-color: #333;
 }
 
 .chapter-thumbnail {
@@ -2687,11 +2699,19 @@ p {
 }
 
 .chapter-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  max-height: 6.6em;
   width: 70%;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 0;
-  text-align: right;
+  padding: 0.6em 0.6em 0 15px;
+  text-align: left;
+  overflow-y: hidden;
 }
 
 .chapter-description {

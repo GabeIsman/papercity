@@ -12,7 +12,12 @@ define(
       return this;
     },
 
-    events: {},
+    events: {
+      'click .chapter': function(e) {
+        var videoUrl = $(e.currentTarget).data('video-url');
+        $('#watch-iframe').attr('src', videoUrl);
+      }
+    },
 
     className: 'view',
 
