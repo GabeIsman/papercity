@@ -2553,7 +2553,6 @@ p {
 }
 
 .image-container:hover > .caption {
-  font-size: 1em;
   background-color: #111;
 }
 
@@ -2581,6 +2580,22 @@ p {
   background-image: url('/images/festivals/ciscff.jpg?1421820018');
 }
 
+#page-footer {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #222;
+}
+
+.footer-link {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-link:visited {
+  color: #ddd;
+}
+
 .info-viz {
   text-align: center;
   display: inline-block;
@@ -2598,10 +2613,19 @@ p {
   }
 }
 .info-centerpiece {
-  color: #39F2F2;
+  -moz-transition: text-shadow 0.5s cubic-bezier(0.04, 1.03, 0.83, 0.67);
+  -o-transition: text-shadow 0.5s cubic-bezier(0.04, 1.03, 0.83, 0.67);
+  -webkit-transition: text-shadow 0.5s cubic-bezier(0.04, 1.03, 0.83, 0.67);
+  transition: text-shadow 0.5s cubic-bezier(0.04, 1.03, 0.83, 0.67);
+  color: transparent;
   line-height: 150px;
   font-size: 100px;
   letter-spacing: -5px;
+  text-shadow: 0 0 800px #39F2F2;
+}
+
+.inview .info-centerpiece {
+  text-shadow: 0 0 0 #39F2F2;
 }
 
 .info-emph {
@@ -2649,6 +2673,13 @@ p {
   height: 100%;
 }
 
+.curriculum-content {
+  padding: 50px 5%;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-color: #ddd;
+}
+
 .chapters {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2690,7 +2721,7 @@ p {
 }
 
 .chapter:hover {
-  background-color: #333;
+  background-color: #222;
 }
 
 .chapter-thumbnail {

@@ -134,7 +134,6 @@ p {
 }
 
 .image-container:hover > .caption {
-  font-size: 1em;
   background-color: $backgroundColor;
 }
 
@@ -160,4 +159,20 @@ p {
 
 .ciscff-image {
   background-image: image-url("festivals/ciscff.jpg");
+}
+
+#page-footer {
+  text-align: center;
+  padding: 50px 0;
+  background-color: $secondaryBgColor;
+}
+
+.footer-link {
+  color: $textColorDarker;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-link:visited {
+  color: $textColorDarker;
 }
