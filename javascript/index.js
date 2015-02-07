@@ -10,11 +10,12 @@ require.config({
 require([
   'router',
   'views/navbar',
+  'views/footer',
   'scroller',
   'jquery',
   'lib/underscore',
   'text'
-], function(Router, NavBar, Scroller) {
+], function(Router, NavBar, Footer, Scroller) {
   // Replace this global with some kind of service-locator pattern maybe?
   window.pcRouter = new Router();
   window.scroller = new Scroller();
@@ -22,6 +23,7 @@ require([
 
   $(document).ready(function() {
     var navBar = new NavBar();
+    var footer = new Footer();
     window.scroller.start();
   });
 });
