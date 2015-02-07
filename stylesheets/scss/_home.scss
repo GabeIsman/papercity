@@ -17,10 +17,16 @@
 }
 
 .info-centerpiece {
-  color: $secondaryHighlight;
+  @include transition(text-shadow 0.5s cubic-bezier(.04,1.03,.83,.67));
+  color: transparent;
   line-height: 150px;
   font-size: 100px;
   letter-spacing: -5px;
+  text-shadow: 0 0 800px $secondaryHighlight;
+}
+
+.inview .info-centerpiece {
+  text-shadow: 0 0 0 $secondaryHighlight;
 }
 
 .info-emph {

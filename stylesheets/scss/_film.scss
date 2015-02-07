@@ -34,6 +34,13 @@
   height: 100%;
 }
 
+.curriculum-content {
+  padding: 50px 5%;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-color: $textColorDarker;
+}
+
 .chapters {
   @include box-sizing(border-box);
   position: absolute;
