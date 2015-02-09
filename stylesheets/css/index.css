@@ -2418,6 +2418,12 @@ p {
   margin: 25px 0;
 }
 
+a, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFB728;
+}
+
 .intro-header {
   -moz-transition: opacity 0.25s linear;
   -o-transition: opacity 0.25s linear;
@@ -2590,6 +2596,7 @@ p {
 
 .footer-link {
   color: #ddd;
+  font-weight: 300;
   text-decoration: none;
   margin: 0 15px;
 }

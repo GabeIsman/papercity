@@ -14,6 +14,12 @@ p {
   margin: 25px 0;
 }
 
+a, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: $highlightColor;
+}
+
 .intro-header {
   @include transition(opacity 0.25s linear);
   font-size: 2em;
@@ -171,6 +177,7 @@ p {
 
 .footer-link {
   color: $textColorDarker;
+  font-weight: 300;
   text-decoration: none;
   margin: 0 15px;
 }
