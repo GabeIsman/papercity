@@ -2376,6 +2376,11 @@
   z-index: 100;
 }
 
+#inner-nav {
+  max-width: 960px;
+  margin: auto;
+}
+
 .nav-item {
   -moz-transition: color 0.25s linear;
   -o-transition: color 0.25s linear;
@@ -2465,7 +2470,7 @@ a, a:visited {
 
 .inner-pane {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
@@ -2497,6 +2502,7 @@ a, a:visited {
   margin: 100px auto;
   font-size: 3em;
   height: 60px;
+  letter-spacing: -10px;
 }
 
 .social-media-link {
@@ -2614,11 +2620,11 @@ a, a:visited {
   vertical-align: top;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .info-viz {
     display: block;
     width: 90%;
-    margin: 100px auto;
+    margin: auto;
   }
 }
 .info-centerpiece {
