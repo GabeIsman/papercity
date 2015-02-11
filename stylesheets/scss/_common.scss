@@ -14,6 +14,12 @@ p {
   margin: 25px 0;
 }
 
+a, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: $highlightColor;
+}
+
 .intro-header {
   @include transition(opacity 0.25s linear);
   font-size: 2em;
@@ -50,7 +56,7 @@ p {
 
 .inner-pane {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
@@ -81,6 +87,7 @@ p {
   margin: 100px auto;
   font-size: 3em;
   height: 60px;
+  letter-spacing: -10px;
 }
 
 .social-media-link {
@@ -171,6 +178,7 @@ p {
 
 .footer-link {
   color: $textColorDarker;
+  font-weight: 300;
   text-decoration: none;
   margin: 0 15px;
 }

@@ -15,6 +15,11 @@
   z-index: 100;
 }
 
+#inner-nav {
+  max-width: 960px;
+  margin: auto;
+}
+
 .nav-item {
   @include transition(color 0.25s linear);
   text-align: center;
