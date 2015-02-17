@@ -6,7 +6,7 @@ define(function() {
       return $pane.offset().top + $pane.height();
     });
     this.lastScrollTop = 0;
-    this.$backgrounds = _.map($('.background'), function(el) {
+    this.$backgrounds = _.map($('.background-container'), function(el) {
       return $(el);
     });
   };

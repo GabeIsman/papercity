@@ -3461,8 +3461,20 @@ a, a:visited {
   font-weight: 300;
 }
 
+.background-container {
+  overflow: hidden;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 .background {
   background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
   bottom: 0;
   /*  filter: brightness(65%);
     -webkit-filter: brightness(65%);
@@ -3471,7 +3483,6 @@ a, a:visited {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: -1;
 }
 
 .social-media-links {
