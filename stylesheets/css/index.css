@@ -3461,6 +3461,24 @@ a, a:visited {
   font-weight: 300;
 }
 
+.section {
+  margin-top: 60px;
+}
+
+.section-header {
+  color: #FFB728;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.full-bleed-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #111;
+  width: 100%;
+}
+
 .background-container {
   overflow: hidden;
   z-index: -1;
@@ -3524,19 +3542,11 @@ a, a:visited {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: inline-block;
-  width: 49.5%;
   position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
-@media (max-width: 900px) {
-  .image-container {
-    display: block;
-    width: 100%;
-    margin: 25px 0;
-  }
-}
 .caption {
   -moz-transition: all 0.25s linear;
   -o-transition: all 0.25s linear;

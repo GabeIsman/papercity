@@ -68,6 +68,22 @@ a, a:visited {
   font-weight: 300;
 }
 
+.section {
+  margin-top: 60px;
+}
+
+.section-header {
+  color: $highlightColor;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.full-bleed-container {
+  @include box-sizing(border-box);
+  background-color: $backgroundColor;
+  width: 100%;
+}
+
 .background-container {
   overflow: hidden;
   z-index: -1;
@@ -125,18 +141,9 @@ a, a:visited {
 
 .image-container {
   @include box-sizing(border-box);
-  display: inline-block;
-  width: 49.5%;
   position: relative;
+  width: 100%;
   overflow: hidden;
-}
-
-@media (max-width: 900px) {
-  .image-container {
-    display: block;
-    width: 100%;
-    margin: 25px 0;
-  }
 }
 
 .caption {
