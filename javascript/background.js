@@ -1,14 +1,12 @@
 define(function() {
   var BackgroundService = function() {
     this.$panes = $('.pane');
-    this.panePositions = _.map(this.$panes, function(pane) {
-      var $pane = $(pane);
-      return $pane.offset().top + $pane.height();
-    });
     this.lastScrollTop = 0;
     this.$backgrounds = _.map($('.background-container'), function(el) {
       return $(el);
     });
+    this.resize();
+    $(window).resize(_.bind(this.resize, this));
   };
 
   BackgroundService.prototype.update = function() {
@@ -17,7 +15,6 @@ define(function() {
       return;
     }
     this.lastScrollTop = scrollTop;
-    var windowHeight = window.innerHeight;
     var i;
     var $pane;
     var bottomPosition;
@@ -32,16 +29,27 @@ define(function() {
     if (!$backgroundImage) {
       return;
     }
-    var bgBottom = windowHeight - bottomPosition;
+    var bgBottom = this.windowHeight - bottomPosition;
     $backgroundImage.css('bottom', bgBottom);
     var $lastBackgroundImage = this.$backgrounds[this.$backgrounds.length - i];
     if ($lastBackgroundImage) {
-      $lastBackgroundImage.css('bottom', windowHeight + 'px');
+      $lastBackgroundImage.css('bottom', this.windowHeight + 'px');
     }
     var $nextBackgroundImage = this.$backgrounds[this.$backgrounds.length - i - 2];
     if ($nextBackgroundImage) {
       $nextBackgroundImage.css('bottom', 0);
     }
+  };
+
+  BackgroundService.prototype.resize = function() {
+    this.windowHeight = window.innerHeight;
+    var spacing = this.windowHeight - 100;
+    $('.background-spacer').css('margin-top', spacing + 'px');
+    this.panePositions = _.map(this.$panes, function(pane) {
+      var $pane = $(pane);
+      return $pane.offset().top + $pane.height();
+    });
+    $('.intro-header').css('padding-top', spacing / 2 + 'px');
   };
 
   return BackgroundService;
