@@ -1,11 +1,11 @@
 define(
   [
-    'text!views/curriculum.html',
+    'text!views/community.html',
     'backbone'
   ],
   function(template) {
 
-  var Curriculum = Backbone.View.extend({
+  var Community = Backbone.View.extend({
     // constructor: function() {} - omitted - defaults to superclass constructor
     render: function() {
       $(this.el).html(template);
@@ -16,9 +16,9 @@ define(
 
     className: 'view',
 
-    id: 'curriculum'
+    id: 'community'
 
   });
 
-  return Curriculum;
+  return Community;
 });
