@@ -3730,6 +3730,7 @@ a, a:visited {
   overflow-y: hidden;
 }
 
+/* This is a hack to avoid ugliness that happens in this awkward screen width zone. */
 @media (max-width: 940px) and (min-width: 550px) {
   .chapter-thumbnail {
     display: none;
