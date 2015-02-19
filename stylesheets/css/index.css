@@ -3641,10 +3641,6 @@ a, a:visited {
   background-size: 100%;
 }
 
-.film-pane {
-  padding: 50px;
-}
-
 .film-watch-pane {
   position: relative;
   margin-top: 40px;
@@ -3655,7 +3651,6 @@ a, a:visited {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  width: 70%;
 }
 
 .film-inner-container {
@@ -3677,22 +3672,10 @@ a, a:visited {
 }
 
 .curriculum-content {
-  padding: 50px 5%;
+  padding: 50px 0;
   font-size: 0.9em;
   font-weight: 300;
   font-color: #ddd;
-}
-
-.chapters {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: inline-block;
-  width: 30%;
-  padding-left: 20px;
 }
 
 .chapters-header {
@@ -3719,7 +3702,7 @@ a, a:visited {
   float: left;
   vertical-align: top;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -3729,6 +3712,7 @@ a, a:visited {
 
 .chapter-thumbnail {
   display: inline-block;
+  vertical-align: top;
   width: 30%;
 }
 
@@ -3738,16 +3722,23 @@ a, a:visited {
   box-sizing: border-box;
   line-height: 1.2em;
   font-size: 0.8em;
-  max-height: 6.6em;
-  width: 70%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.6em 0.6em 0 15px;
+  max-height: 6em;
+  width: 68%;
+  display: inline-block;
+  padding: 0 0.6em 0 15px;
   text-align: left;
   overflow-y: hidden;
 }
 
+@media (max-width: 940px) and (min-width: 550px) {
+  .chapter-thumbnail {
+    display: none;
+  }
+
+  .chapter-text {
+    width: 100%;
+  }
+}
 .chapter-description {
   width: 100%;
   color: #bbb;
