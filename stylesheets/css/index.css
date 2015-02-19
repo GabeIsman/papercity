@@ -3758,3 +3758,10 @@ a, a:visited {
   font-weight: 300;
   font-size: 11px;
 }
+
+.bio-position {
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic;
+  color: #ddd;
+}
