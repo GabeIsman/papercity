@@ -21,7 +21,6 @@ a, a:visited {
 }
 
 .intro-header {
-  @include transition(opacity 0.25s linear);
   font-size: 2em;
   font-weight: 800;
   /* Maybe fix this with JS? */

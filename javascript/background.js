@@ -49,7 +49,6 @@ define(function() {
       var $pane = $(pane);
       return $pane.offset().top + $pane.height();
     });
-    $('.intro-header').css('padding-top', spacing / 2 + 'px');
   };
 
   return BackgroundService;

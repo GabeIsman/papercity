@@ -3409,10 +3409,6 @@ a, a:visited {
 }
 
 .intro-header {
-  -moz-transition: opacity 0.25s linear;
-  -o-transition: opacity 0.25s linear;
-  -webkit-transition: opacity 0.25s linear;
-  transition: opacity 0.25s linear;
   font-size: 2em;
   font-weight: 800;
   /* Maybe fix this with JS? */
