@@ -37,18 +37,18 @@ define(
       this.requestID = window.requestAnimationFrame(_.bind(this.animate, this));
     };
 
-    ScrollService.prototype.updateTitle = _.throttle(function() {
+    ScrollService.prototype.updateTitle = function() {
       this.scrollTop = this.$body.scrollTop();
-      if (this.scrollTop > this.windowHeight / 4) {
-        if (this.$introHeader) {
-          this.$introHeader.css('opacity', 0);
-        }
+      if (this.scrollTop < this.windowHeight) {
+        var titleSpacing = this.baselineTitleSpacing - (this.scrollTop / 3);
+        this.$introHeader.css({
+          'padding-top': titleSpacing + 'px',
+          'opacity': 1 - (this.scrollTop / this.windowHeight)
+        });
       } else {
-        if (this.$introHeader) {
-          this.$introHeader.css('opacity', 1);
-        }
+        this.$introHeader.css('opacity', 0);
       }
-    }, 100);
+    };
 
     ScrollService.prototype.updateInViewElements = _.throttle(function() {
       var scrollTop = $(window).scrollTop();
@@ -72,6 +72,7 @@ define(
 
     ScrollService.prototype.handleResize = function() {
       this.windowHeight = window.innerHeight;
+      this.baselineTitleSpacing = (this.windowHeight - 100) / 2;
     };
 
     function isInView($el, opt_scrollTop) {

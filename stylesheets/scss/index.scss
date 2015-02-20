@@ -2,7 +2,8 @@
 @import "compass/css3/box-sizing";
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/animation";
-@import "reset";
+@import "normalize";
+@import "skeleton";
 @import "font-awesome/font-awesome";
 @import "fonts";
 @import "variables";
@@ -10,3 +11,4 @@
 @import "common";
 @import "home";
 @import "film";
+@import "about";
