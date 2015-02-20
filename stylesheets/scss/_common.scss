@@ -161,12 +161,16 @@ a, a:visited {
   background-color: $backgroundColor;
 }
 
+.fire-image {
+  background-image: image-url("fire.jpg");
+}
+
 .sticker-image {
-  background-image: image-url("sticker.jpeg");
+  background-image: image-url("sticker.jpg");
 }
 
 .success-image {
-  background-image: image-url("teaching/success.jpeg");
+  background-image: image-url("teaching/success.jpg");
 }
 
 .paideia-image {
@@ -183,6 +187,11 @@ a, a:visited {
 
 .ciscff-image {
   background-image: image-url("festivals/ciscff.jpg");
+}
+
+.background-overlay {
+  background-color: $backgroundColor;
+  opacity: 0.5;
 }
 
 #page-footer {
