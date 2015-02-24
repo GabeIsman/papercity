@@ -2,12 +2,13 @@ define(
   [
     'views/home',
     'views/about',
-    'views/community',
     'views/film',
+    'views/community',
+    'views/curriculum',
     'viewmanager',
     'backbone',
   ],
-  function(Home, About, Community, Film, ViewManager) {
+  function(Home, About, Film, Community, Curriculum, ViewManager) {
 
     var Router = Backbone.Router.extend({
       constructor: function(options) {
@@ -21,6 +22,7 @@ define(
           'about': _.bind(this.viewManager.render, this, About),
           'community': _.bind(this.viewManager.render, this, Community),
           'film': _.bind(this.viewManager.render, this, Film),
+          'curriculum': _.bind(this.viewManager.render, this, Curriculum),
         }, options.routes);
         this.constructor.__super__.constructor.call(this, options);
       },
