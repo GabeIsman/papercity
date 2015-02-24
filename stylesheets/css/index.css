@@ -3457,6 +3457,14 @@ a, a:visited {
   font-weight: 300;
 }
 
+.white {
+  color: #fff;
+}
+
+.centered {
+  text-align: center;
+}
+
 .section {
   margin-top: 60px;
 }
@@ -3565,19 +3573,19 @@ a, a:visited {
 }
 
 .fire-image {
-  background-image: url('/images/fire.jpg?1424390061');
+  background-image: url('/images/fire.jpg?1424392239');
 }
 
 .sticker-image {
-  background-image: url('/images/sticker.jpg?1424390315');
+  background-image: url('/images/sticker.jpg?1424392239');
 }
 
 .success-image {
-  background-image: url('/images/teaching/success.jpg?1424391385');
+  background-image: url('/images/teaching/success.jpg?1424392239');
 }
 
 .paideia-image {
-  background-image: url('/images/teaching/paideiahs.jpg?1424391324');
+  background-image: url('/images/teaching/paideiahs.jpg?1424392239');
 }
 
 .bangobama-image {
@@ -3585,7 +3593,7 @@ a, a:visited {
 }
 
 .summeracademy-image {
-  background-image: url('/images/teaching/summeracademy.jpg?1424391432');
+  background-image: url('/images/teaching/summeracademy.jpg?1424392239');
 }
 
 .ciscff-image {
@@ -3639,6 +3647,10 @@ a, a:visited {
 .info-emph {
   font-weight: bold;
   color: #FFB728;
+}
+
+.info-container {
+  margin-bottom: 60px;
 }
 
 .film-watch-pane {
