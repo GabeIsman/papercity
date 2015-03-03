@@ -5,6 +5,10 @@ body {
   max-width: 100%;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 #content-pane {
   @include box-sizing(border-box);
   max-width: 100%;
@@ -17,6 +21,11 @@ p {
 a, a:visited {
   font-weight: bold;
   text-decoration: none;
+  color: $highlightColor;
+  cursor: pointer;
+}
+
+a:hover {
   color: $highlightColor;
 }
 

@@ -1,18 +1,28 @@
 define(
   [
+    'views/formpopup',
     'text!views/community.html',
     'backbone'
   ],
-  function(template) {
+  function(FormPopup, template) {
 
   var Community = Backbone.View.extend({
-    // constructor: function() {} - omitted - defaults to superclass constructor
+    initialize: function() {
+      this.popup = new FormPopup();
+    },
+
     render: function() {
       $(this.el).html(template);
       return this;
     },
 
-    events: {},
+    openPopup: function() {
+      this.popup.open();
+    },
+
+    events: {
+      'click .access-link': 'openPopup',
+    },
 
     className: 'view',
 

@@ -3391,6 +3391,10 @@ body {
   max-width: 100%;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 #content-pane {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3405,6 +3409,11 @@ p {
 a, a:visited {
   font-weight: bold;
   text-decoration: none;
+  color: #FFB728;
+  cursor: pointer;
+}
+
+a:hover {
   color: #FFB728;
 }
 
@@ -3768,4 +3777,53 @@ a, a:visited {
   font-weight: 300;
   font-style: italic;
   color: #ddd;
+}
+
+#popup-container {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.popup-overlay {
+  background-color: #111;
+  opacity: 0.8;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.popup-header {
+  position: relative;
+}
+
+.popup {
+  display: inline-block;
+  position: absolute;
+  background-color: #111;
+  width: 800px;
+  max-width: 100%;
+  z-index: 2;
+  max-height: 80%;
+  -moz-box-shadow: -2px -2px 2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px 1px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: -2px -2px 2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -2px -2px 2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px 1px rgba(255, 255, 255, 0.1);
+}
+
+.popup-exit {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.popup-exit:hover {
+  color: #FFB728;
 }
