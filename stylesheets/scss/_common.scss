@@ -124,17 +124,22 @@ a:hover {
 }
 
 .social-media-links {
+  @include transition(font-size .6s ease-out);
   text-align: center;
   width: 100%;
   max-width: 600px;
   margin: 100px auto;
-  font-size: 3em;
+  font-size: 1em;
   height: 60px;
   letter-spacing: -10px;
 }
 
+.inview .social-media-links {
+  font-size: 3em;
+}
+
 .social-media-link {
-  @include transition(all 0.25s linear);
+  @include transition(color 0.25s linear);
   color: $textColor;
   display: inline-block;
   width: 100px;
