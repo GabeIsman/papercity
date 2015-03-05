@@ -21,7 +21,8 @@ module.exports = function(grunt) {
           imagesDir: 'papercity/images',
           fontsDir: 'papercity/fonts',
           outputStyle: 'compressed',
-          environment: 'production'
+          environment: 'production',
+          force: true
         }
       }
     },
