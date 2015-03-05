@@ -3799,7 +3799,9 @@ a:hover {
 
 .tumblr_post img {
   float: left;
-  margin: 20px;
+  margin: 10px;
+  margin-left: 0;
+  max-width: 100%;
 }
 
 .tumblr_post {
