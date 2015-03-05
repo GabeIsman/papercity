@@ -3617,6 +3617,10 @@ a:hover {
   background-image: url('/images/festivals/ciscff.jpg?1421820018');
 }
 
+.evanshs-image {
+  background-image: url('/images/teaching/evanshs.jpg?1425520682');
+}
+
 .background-overlay {
   background-color: #111;
   opacity: 0.5;
@@ -3785,6 +3789,31 @@ a:hover {
   font-weight: 300;
   font-style: italic;
   color: #ddd;
+}
+
+.tumblr_posts {
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 800px;
+}
+
+.tumblr_post img {
+  float: left;
+  margin: 20px;
+}
+
+.tumblr_post {
+  overflow: hidden;
+  *zoom: 1;
+  font-size: 0.8em;
+  border-bottom: 1px solid #999;
+  padding: 10px 0;
+  margin: 30px 0 10px 0;
+}
+
+.tumblr_title {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 #popup-container {

@@ -9,10 +9,14 @@ define(
   var Community = Backbone.View.extend({
     initialize: function() {
       this.popup = new FormPopup();
+      this.template = _.template(template);
     },
 
     render: function() {
-      $(this.el).html(template);
+      var tumblrContent = $('.tumblr_posts')[0].outerHTML;
+      $(this.el).html(this.template({
+        tumblrContent: tumblrContent
+      }));
       return this;
     },
 
