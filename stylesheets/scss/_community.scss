@@ -1,0 +1,33 @@
+.tumblr_posts {
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 800px;
+}
+
+.tumblr_post img {
+  float: left;
+  margin: 10px;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.tumblr_post {
+  @include clearfix();
+  font-size: 0.8em;
+  border-bottom: 1px solid #999;
+  padding: 10px 0;
+  margin: 30px 0 10px 0;
+}
+
+.tumblr_post:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  img {
+    margin-top: 0;
+  }
+}
+
+.tumblr_title {
+  font-weight: bold;
+  font-size: 1.1em;
+}

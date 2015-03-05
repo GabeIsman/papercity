@@ -1,7 +1,7 @@
 define(
   [
     'background',
-    'lib/rafpolyfill'
+    'rafpolyfill'
   ],
   function(BackgroundService) {
 

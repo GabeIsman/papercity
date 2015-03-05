@@ -5,6 +5,10 @@ body {
   max-width: 100%;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 #content-pane {
   @include box-sizing(border-box);
   max-width: 100%;
@@ -17,6 +21,11 @@ p {
 a, a:visited {
   font-weight: bold;
   text-decoration: none;
+  color: $highlightColor;
+  cursor: pointer;
+}
+
+a:hover {
   color: $highlightColor;
 }
 
@@ -115,17 +124,22 @@ a, a:visited {
 }
 
 .social-media-links {
+  @include transition(font-size .6s ease-out);
   text-align: center;
   width: 100%;
   max-width: 600px;
   margin: 100px auto;
-  font-size: 3em;
+  font-size: 1em;
   height: 60px;
   letter-spacing: -10px;
 }
 
+.inview .social-media-links {
+  font-size: 3em;
+}
+
 .social-media-link {
-  @include transition(all 0.25s linear);
+  @include transition(color 0.25s linear);
   color: $textColor;
   display: inline-block;
   width: 100px;
@@ -195,6 +209,10 @@ a, a:visited {
 
 .ciscff-image {
   background-image: image-url("festivals/ciscff.jpg");
+}
+
+.evanshs-image {
+  background-image: image-url("teaching/evanshs.jpg");
 }
 
 .background-overlay {

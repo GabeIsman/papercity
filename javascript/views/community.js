@@ -1,18 +1,32 @@
 define(
   [
+    'views/formpopup',
     'text!views/community.html',
     'backbone'
   ],
-  function(template) {
+  function(FormPopup, template) {
 
   var Community = Backbone.View.extend({
-    // constructor: function() {} - omitted - defaults to superclass constructor
+    initialize: function() {
+      this.popup = new FormPopup();
+      this.template = _.template(template);
+    },
+
     render: function() {
-      $(this.el).html(template);
+      var tumblrContent = $('.tumblr_posts')[0].outerHTML;
+      $(this.el).html(this.template({
+        tumblrContent: tumblrContent
+      }));
       return this;
     },
 
-    events: {},
+    openPopup: function() {
+      this.popup.open();
+    },
+
+    events: {
+      'click .access-link': 'openPopup',
+    },
 
     className: 'view',
 
