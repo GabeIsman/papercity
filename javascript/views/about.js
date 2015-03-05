@@ -5,20 +5,20 @@ define(
   ],
   function(template) {
 
-  var About = Backbone.View.extend({
-    // constructor: function() {} - omitted - defaults to superclass constructor
-    render: function() {
-      $(this.el).html(template);
-      return this;
-    },
+    var About = Backbone.View.extend({
+      // constructor: function() {} - omitted - defaults to superclass constructor
+      render: function() {
+        $(this.el).html(template);
+        return this;
+      },
 
-    events: {},
+      events: {},
 
-    className: 'view',
+      className: 'view',
 
-    id: 'about'
+      id: 'about'
 
-  });
+    });
 
-  return About;
+    return About;
 });
