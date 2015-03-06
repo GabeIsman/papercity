@@ -3333,6 +3333,54 @@ there.
   font-family: 'United States';
   src: url('/fonts/united-states.ttf?1422748493') format("truetype");
 }
+@-moz-keyframes fade-out {
+  0% {
+    opacity: 1;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  10% {
+    margin-top: -15px;
+  }
+  100% {
+    opacity: 0;
+    font-size: 0;
+    line-height: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  10% {
+    margin-top: -15px;
+  }
+  100% {
+    opacity: 0;
+    font-size: 0;
+    line-height: 0;
+    display: none;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  10% {
+    margin-top: -15px;
+  }
+  100% {
+    opacity: 0;
+    font-size: 0;
+    line-height: 0;
+    display: none;
+  }
+}
 #top-nav {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3618,7 +3666,7 @@ a:hover {
 }
 
 .evanshs-image {
-  background-image: url('/images/teaching/evanshs.jpg?1425582768');
+  background-image: url('/images/teaching/evanshs.jpg?1425589036');
 }
 
 .background-overlay {
@@ -3705,14 +3753,20 @@ a:hover {
 }
 
 .curriculum-content {
-  padding: 50px 0;
+  padding: 20px 0;
   font-size: 0.9em;
   font-weight: 300;
-  font-color: #ddd;
+  color: #ddd;
 }
 
-.chapters-header {
+.film-description-header {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.1em;
+  padding: 10px;
+  padding-bottom: 0;
   text-align: center;
+  color: #fff;
 }
 
 .chapter-list {
@@ -3729,59 +3783,82 @@ a:hover {
   -o-transition: background-color 0.3s ease-in-out;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
-  padding: 10px;
   position: relative;
   display: inline-block;
   float: left;
-  vertical-align: top;
   width: 100%;
   margin-bottom: 20px;
   cursor: pointer;
+  padding-bottom: 56%;
+  max-width: 300px;
 }
 
-.chapter:hover {
-  background-color: #222;
+.chapter:hover .chapter-description {
+  margin-top: -15px;
+  display: block;
+}
+.chapter:hover .chapter-title,
+.chapter:hover .chapter-duration {
+  -moz-animation: fade-out 0.2s ease-in 0s normal 1 both;
+  -webkit-animation: fade-out 0.2s ease-in 0s normal 1 both;
+  animation: fade-out 0.2s ease-in 0s normal 1 both;
+}
+.chapter:hover .chapter-text {
+  background-color: rgba(30, 30, 30, 0.7);
+  top: 0;
+  bottom: 0;
 }
 
 .chapter-thumbnail {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .chapter-text {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  line-height: 1.2em;
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.5);
+  line-height: 1.6em;
   font-size: 0.8em;
-  max-height: 6em;
-  width: 68%;
+  top: 50%;
+  left: 0;
+  width: 100%;
   display: inline-block;
   padding: 0 0.6em 0 15px;
-  text-align: left;
-  overflow-y: hidden;
+  text-align: center;
 }
 
-/* This is a hack to avoid ugliness that happens in this awkward screen width zone. */
-@media (max-width: 940px) and (min-width: 550px) {
-  .chapter-thumbnail {
-    display: none;
-  }
-
-  .chapter-text {
-    width: 100%;
-  }
-}
 .chapter-description {
+  -moz-transition: margin-top 0.2s ease-in;
+  -o-transition: margin-top 0.2s ease-in;
+  -webkit-transition: margin-top 0.2s ease-in;
+  transition: margin-top 0.2s ease-in;
   width: 100%;
   color: #bbb;
+  display: none;
 }
 
 .chapter-duration {
   color: #ddd;
   font-weight: 300;
   font-size: 11px;
+}
+
+.access-container {
+  margin-top: 20px;
+}
+
+.film-pane .access-link {
+  font-size: 0.7em;
 }
 
 .bio-position {

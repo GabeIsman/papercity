@@ -25,14 +25,22 @@
 }
 
 .curriculum-content {
-  padding: 50px 0;
+  padding: 20px 0;
   font-size: 0.9em;
   font-weight: 300;
-  font-color: $textColorDarker;
+  color: $textColorDarker;
 }
 
-.chapters-header {
+.film-description {}
+
+.film-description-header {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.1em;
+  padding: 10px;
+  padding-bottom: 0;
   text-align: center;
+  color: $textColor;
 }
 
 .chapter-list {
@@ -43,47 +51,53 @@
 .chapter {
   @include box-sizing(border-box);
   @include transition(background-color 0.3s ease-in-out);
-  padding: 10px;
   position: relative;
   display: inline-block;
   float: left;
-  vertical-align: top;
   width: 100%;
   margin-bottom: 20px;
   cursor: pointer;
+  padding-bottom: 56%;
+  max-width: 300px;
 }
 
 .chapter:hover {
-  background-color: $secondaryBgColor;
+  .chapter-description {
+    margin-top: -15px;
+    display: block;
+  }
+  .chapter-title,
+  .chapter-duration {
+    @include animation(fade-out 0.2s ease-in 0s normal 1 both);
+  }
+  .chapter-text {
+    background-color: rgba(30,30,30, 0.7);
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .chapter-thumbnail {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .chapter-text {
+  @include transition(all 0.2s ease-in);
   @include box-sizing(border-box);
-  line-height: 1.2em;
+  position: absolute;
+  background-color: rgba(30,30,30, 0.5);
+  line-height: 1.6em;
   font-size: 0.8em;
-  max-height: 6em;
-  width: 68%;
+  top: 50%;
+  left: 0;
+  width: 100%;
   display: inline-block;
   padding: 0 0.6em 0 15px;
-  text-align: left;
-  overflow-y: hidden;
-}
-
-/* This is a hack to avoid ugliness that happens in this awkward screen width zone. */
-@media (max-width: 940px) and (min-width: 550px) {
-  .chapter-thumbnail {
-    display: none;
-  }
-
-  .chapter-text {
-    width: 100%
-  }
+  text-align: center;
 }
 
 .chapter-title {
@@ -91,12 +105,22 @@
 }
 
 .chapter-description {
+  @include transition(margin-top 0.2s ease-in);
   width: 100%;
   color: #bbb;
+  display: none;
 }
 
 .chapter-duration {
   color: $textColorDarker;
   font-weight: 300;
   font-size: 11px;
+}
+
+.access-container {
+  margin-top: 20px;
+}
+
+.film-pane .access-link {
+  font-size: 0.7em;
 }

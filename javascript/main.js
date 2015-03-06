@@ -9,7 +9,6 @@ require.config({
   }
 });
 
-
 define(
   'main',
   [
