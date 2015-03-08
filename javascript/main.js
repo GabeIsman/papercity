@@ -1,17 +1,13 @@
-// amdclean
-require([], function() {
-  require.config({
-    baseUrl: '/javascript/',
-    paths: {
-      text: 'lib/text',
-      backbone: 'lib/backbone',
-      jquery: 'lib/jquery',
-      underscore: 'lib/underscore',
-      rafpolyfill: 'lib/rafpolyfill',
-    }
-  });
+require.config({
+  baseUrl: '/javascript/',
+  paths: {
+    text: 'lib/text',
+    backbone: 'lib/backbone',
+    jquery: 'lib/jquery',
+    underscore: 'lib/underscore',
+    rafpolyfill: 'lib/rafpolyfill',
+  }
 });
-
 
 define(
   'main',

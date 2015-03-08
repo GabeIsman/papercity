@@ -1,0 +1,5 @@
+@include keyframes(fade-out) {
+  0% { opacity: 1; font-size: inherit; line-height: inherit;}
+  10% { margin-top: -15px; }
+  100% { opacity: 0; font-size: 0; line-height: 0; display: none;}
+}
