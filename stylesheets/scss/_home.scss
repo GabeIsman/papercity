@@ -3,13 +3,22 @@
 }
 
 .info-centerpiece {
-  @include transition(text-shadow 0.5s cubic-bezier(.04,1.03,.83,.67));
+  @include transition(text-shadow 0.5s cubic-bezier(.04,1.03,.83,.67) 0.3s);
   color: transparent;
   line-height: 150px;
   font-size: 100px;
   letter-spacing: -5px;
   text-shadow: 0 0 800px $secondaryHighlight;
 }
+
+.info-viz:first-child .info-centerpiece {
+  @include transition-delay(0s);
+}
+
+.info-viz:last-child .info-centerpiece {
+  @include transition-delay(0.6s);
+}
+
 
 .inview .info-centerpiece {
   text-shadow: 0 0 0 $secondaryHighlight;

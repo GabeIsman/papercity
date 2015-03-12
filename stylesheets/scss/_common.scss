@@ -111,9 +111,10 @@ a:hover {
 }
 
 .background {
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   bottom: 0;
 /*  filter: brightness(65%);
   -webkit-filter: brightness(65%);
@@ -128,9 +129,9 @@ a:hover {
   text-align: center;
   width: 100%;
   max-width: 600px;
-  margin: 100px auto;
+  margin: 0 auto;
   font-size: 1em;
-  height: 60px;
+  line-height: 3.2em;
   letter-spacing: -10px;
 }
 
