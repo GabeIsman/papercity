@@ -16,6 +16,8 @@ body.modal-open {
 
 p {
   margin: 25px 0;
+  line-height: 1.8em;
+  font-size: 1.1em;
 }
 
 a, a:visited {
@@ -238,4 +240,11 @@ a:hover {
 
 .footer-link:visited {
   color: $textColorDarker;
+}
+
+.vertical-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }

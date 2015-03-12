@@ -3452,6 +3452,8 @@ body.modal-open {
 
 p {
   margin: 25px 0;
+  line-height: 1.8em;
+  font-size: 1.1em;
 }
 
 a, a:visited {
@@ -3694,8 +3696,16 @@ a:hover {
   color: #ddd;
 }
 
+.vertical-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
 .info-viz {
   text-align: center;
+  color: #ddd;
 }
 
 .info-centerpiece {
@@ -3729,9 +3739,14 @@ a:hover {
   text-shadow: 0 0 0 #39F2F2;
 }
 
+.info-caption {
+  font-style: italic;
+}
+
 .info-emph {
   font-weight: bold;
   color: #FFB728;
+  font-style: normal;
 }
 
 .info-container {
@@ -3768,8 +3783,7 @@ a:hover {
   height: 100%;
 }
 
-.curriculum-content {
-  padding: 20px 0;
+.curriculum-content p {
   font-size: 0.9em;
   font-weight: 300;
   color: #ddd;
@@ -3807,6 +3821,7 @@ a:hover {
   cursor: pointer;
   padding-bottom: 56%;
   max-width: 300px;
+  overflow-y: hidden;
 }
 
 .chapter:hover .chapter-description {
@@ -3870,7 +3885,7 @@ a:hover {
 }
 
 .access-container {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .film-pane .access-link {

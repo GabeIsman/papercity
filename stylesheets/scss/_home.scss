@@ -1,5 +1,6 @@
 .info-viz {
   text-align: center;
+  color: $textColorDarker;
 }
 
 .info-centerpiece {
@@ -24,9 +25,14 @@
   text-shadow: 0 0 0 $secondaryHighlight;
 }
 
+.info-caption {
+  font-style: italic;
+}
+
 .info-emph {
   font-weight: bold;
   color: $highlightColor;
+  font-style: normal;
 }
 
 .info-container {
