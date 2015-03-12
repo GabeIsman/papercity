@@ -182,6 +182,39 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.curriculum-cover-caption {
+  @include transition(all 0.2s linear);
+  line-height: 3em;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  text-align: center;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .curriculum-cover-caption {
+    bottom: 0;
+    font-size: 1em;
+  }
+}
+
+.curriculum-cover {
+  @include transition(box-shadow 0.2s linear);
+  cursor: pointer;
+}
+
+.curriculum-cover:hover {
+  @include box-shadow(
+    -2px -2px 2px 1px rgba(255,255,255,0.1),
+    2px 2px 2px 1px rgba(255,255,255,0.1));
+}
+
 .image-container:hover > .caption {
   background-color: $backgroundColor;
 }
@@ -242,9 +275,9 @@ a:hover {
   color: $textColorDarker;
 }
 
+/* These are identified by js and have a fixed height set, use with caution. */
 .vertical-aligner {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
 }

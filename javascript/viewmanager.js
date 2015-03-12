@@ -32,6 +32,7 @@ define(function() {
 
       window.scroller.stop();
       window.scroller.start();
+      window.stylingService.update();
     }, this));
   };
 

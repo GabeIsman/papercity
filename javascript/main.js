@@ -16,14 +16,16 @@ define(
     'views/navbar',
     'views/footer',
     'scroller',
+    'styling',
     'jquery',
     'underscore',
     'text'
   ],
-  function(Router, NavBar, Footer, Scroller) {
+  function(Router, NavBar, Footer, Scroller, StylingService) {
     // Replace this global with some kind of service-locator pattern maybe?
     window.pcRouter = new Router();
     window.scroller = new Scroller();
+    window.stylingService = new StylingService();
     pcRouter.start();
 
     $(document).ready(function() {
@@ -32,5 +34,6 @@ define(
       navBar.render();
       footer.render();
       window.scroller.start();
+      window.stylingService.update();
     });
   });
