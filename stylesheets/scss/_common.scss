@@ -16,6 +16,8 @@ body.modal-open {
 
 p {
   margin: 25px 0;
+  line-height: 1.8em;
+  font-size: 1.1em;
 }
 
 a, a:visited {
@@ -111,9 +113,10 @@ a:hover {
 }
 
 .background {
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   bottom: 0;
 /*  filter: brightness(65%);
   -webkit-filter: brightness(65%);
@@ -128,9 +131,9 @@ a:hover {
   text-align: center;
   width: 100%;
   max-width: 600px;
-  margin: 100px auto;
+  margin: 0 auto;
   font-size: 1em;
-  height: 60px;
+  line-height: 3.2em;
   letter-spacing: -10px;
 }
 
@@ -237,4 +240,11 @@ a:hover {
 
 .footer-link:visited {
   color: $textColorDarker;
+}
+
+.vertical-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }

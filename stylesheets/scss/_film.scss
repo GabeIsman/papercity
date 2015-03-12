@@ -24,8 +24,7 @@
   height: 100%;
 }
 
-.curriculum-content {
-  padding: 20px 0;
+.curriculum-content p {
   font-size: 0.9em;
   font-weight: 300;
   color: $textColorDarker;
@@ -59,6 +58,7 @@
   cursor: pointer;
   padding-bottom: 56%;
   max-width: 300px;
+  overflow-y: hidden;
 }
 
 .chapter:hover {
@@ -118,7 +118,7 @@
 }
 
 .access-container {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .film-pane .access-link {
