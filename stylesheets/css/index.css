@@ -3710,6 +3710,10 @@ a:hover {
   background-image: url('/images/teaching/evanshs.jpg?1425589036');
 }
 
+.king-image {
+  background-image: url('/images/king.jpg?1426208446');
+}
+
 .background-overlay {
   background-color: #111;
   opacity: 0.5;
