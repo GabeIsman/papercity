@@ -15,24 +15,28 @@
         <iframe id="watch-iframe" src="<%= vimeoUrl %>" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <div id="curriculum-content">
-        <div class="film-description">
-          <header class="film-description-header">
-            This is a story of the American Dream in one of the nation’s arson capitals
-          </header>
-          <p>
-            <i>Paper City</i> began from interviews with middle school students who must navigate booming drug economies, struggling school systems, gang warfare, and unprecedented rates of mass incarceration in order to make it to graduation.
-          </p>
-          <p>
-            In response, a community of teachers, law officers, activists, and politicians created <i>Paper City</i> for youth to understand these issues and realize their power to determine the future in America.
-          </p>
-          <p>
-            <i>Paper City</i> is divided into 7 chapters that address specific points within the school-to-prison pipeline along with corresponding Help Increase the Peace (HIPP) lessons and activities.
-          </p>
-          <p>
-            These interactive lessons engage middle school, high school, and adult audiences
-            in active discussion about socio-economics, community empowerment, restorative justice, and the power of decision-making.
-          </p>
-        </div>
+        <% if (chapterContent) { %>
+          <%= chapterContent %>
+        <% } else { %>
+          <div class="film-description">
+            <header class="film-description-header">
+              This is a story of the American Dream in one of the nation’s arson capitals
+            </header>
+            <p>
+              <i>Paper City</i> began from interviews with middle school students who must navigate booming drug economies, struggling school systems, gang warfare, and unprecedented rates of mass incarceration in order to make it to graduation.
+            </p>
+            <p>
+              In response, a community of teachers, law officers, activists, and politicians created <i>Paper City</i> for youth to understand these issues and realize their power to determine the future in America.
+            </p>
+            <p>
+              <i>Paper City</i> is divided into 7 chapters that address specific points within the school-to-prison pipeline along with corresponding Help Increase the Peace (HIPP) lessons and activities.
+            </p>
+            <p>
+              These interactive lessons engage middle school, high school, and adult audiences
+              in active discussion about socio-economics, community empowerment, restorative justice, and the power of decision-making.
+            </p>
+          </div>
+        <% } %>
       </div>
       <div class="access-container">
         <a class="access-link">Don't have the password? Click here for free access</a>

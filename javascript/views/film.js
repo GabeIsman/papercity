@@ -21,14 +21,23 @@ define(
       chapterTemplate: _.template(chapterTemplate),
 
       initialize: function() {
-        console.log(this.chapterData);
         this.popup = new FormPopup();
       },
 
-      render: function() {
-        $(this.el).html(this.template({
-          vimeoUrl: this.vimeoTemplate({ videoId: this.videoId })
-        }));
+      render: function(opt_chapterId) {
+        var templateData = {
+          vimeoUrl: this.vimeoTemplate({ videoId: this.videoId }),
+          chapters: this.chapterData,
+        };
+        var chapter;
+        if (opt_chapterId && (chapter = this.chapterData[opt_chapterId])) {
+          templateData.vimeoUrl = this.vimeoTemplate({ videoId: opt_chapterId});
+          templateData.chapterContent = this.chapterTemplate(chapter);
+        }
+        $(this.el).html(this.template(templateData));
+        if (chapter) {
+          this.$('li[data-video-id=' + opt_chapterId + ']').addClass('active');
+        }
         return this;
       },
 
@@ -50,6 +59,7 @@ define(
         $('#curriculum-content').html(this.chapterTemplate(chapterDatum));
         $('.chapter').removeClass('active');
         $currentTarget.addClass('active');
+        pcRouter.navigate('film/' + videoId);
       },
 
       className: 'view',
