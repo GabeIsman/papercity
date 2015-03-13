@@ -83,5 +83,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.registerTask('default', ['compass:dev', 'watch']);
-  grunt.registerTask('productionize', ['compass:prod', 'requirejs:compile', 'replace:scriptsrc', 'replace:imageurls']);
+  grunt.registerTask('productionize', ['compass:prod', 'replace:scriptsrc', 'replace:imageurls', 'requirejs:compile']);
 };
