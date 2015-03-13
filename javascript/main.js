@@ -26,6 +26,10 @@ define(
     window.pcRouter = new Router();
     window.scroller = new Scroller();
     window.stylingService = new StylingService();
+    $(document).on("click", "a.internal", function(e) {
+      e.preventDefault();
+      pcRouter.navigate($(e.currentTarget).attr('href'), { trigger: true });
+    });
     pcRouter.start();
 
     $(document).ready(function() {
