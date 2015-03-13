@@ -1,0 +1,18 @@
+<div class="film-description">
+  <header class="film-description-header">
+    <%= title %>
+  </header>
+  <p>
+    <%= content %>
+  </p>
+  <ul>
+    <% _.each(exercises, function(exercise) { %>
+      <li>
+        <%= exercise.title %> -
+        <a href="/documents/program.pdf" target="_blank" class="exercise-page-num">
+           p. <%= exercise.pageNum %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</div>

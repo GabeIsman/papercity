@@ -3862,16 +3862,20 @@ a:hover {
   overflow-y: hidden;
 }
 
+.chapter.active .chapter-description,
 .chapter:hover .chapter-description {
   margin-top: -15px;
   display: block;
 }
+.chapter.active .chapter-title,
+.chapter.active .chapter-duration,
 .chapter:hover .chapter-title,
 .chapter:hover .chapter-duration {
   -moz-animation: fade-out 0.2s ease-in 0s normal 1 both;
   -webkit-animation: fade-out 0.2s ease-in 0s normal 1 both;
   animation: fade-out 0.2s ease-in 0s normal 1 both;
 }
+.chapter.active .chapter-text,
 .chapter:hover .chapter-text {
   background-color: rgba(30, 30, 30, 0.7);
   top: 0;
@@ -3929,6 +3933,10 @@ a:hover {
 
 .film-pane .access-link {
   font-size: 0.7em;
+}
+
+a.exercise-page-num {
+  color: #ddd;
 }
 
 .bio-position {

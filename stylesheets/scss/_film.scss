@@ -61,6 +61,7 @@
   overflow-y: hidden;
 }
 
+.chapter.active,
 .chapter:hover {
   .chapter-description {
     margin-top: -15px;
@@ -124,4 +125,8 @@
 
 .film-pane .access-link {
   font-size: 0.7em;
+}
+
+a.exercise-page-num {
+  color: $textColorDarker;
 }
