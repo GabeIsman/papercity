@@ -10,8 +10,8 @@
 
 <div class="background-spacer pane film-pane">
   <div class="film-watch-pane container">
-    <div class="film-container nine columns">
-      <div class="film-inner-container">
+    <div class="nine columns">
+      <div class="film-container">
         <iframe id="watch-iframe" src="<%= vimeoUrl %>" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <div id="curriculum-content">
@@ -19,8 +19,9 @@
           <%= chapterContent %>
         <% } else { %>
           <div class="film-description">
+            <img src="http://gabeisman.github.io/papercity/images/festivals/laurels-banner.png" class="laurels">
             <header class="film-description-header">
-              This is a story of the American Dream in one of the nation’s arson capitals
+              This is the story of the American Dream in one of the nation’s arson capitals
             </header>
             <p>
               <i>Paper City</i> began from interviews with middle school students who must navigate booming drug economies, struggling school systems, gang warfare, and unprecedented rates of mass incarceration in order to make it to graduation.
