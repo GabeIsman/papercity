@@ -37,7 +37,5 @@ define(
       var footer = new Footer();
       navBar.render();
       footer.render();
-      window.scroller.start();
-      window.stylingService.update();
     });
   });

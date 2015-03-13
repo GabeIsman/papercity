@@ -14,8 +14,10 @@ body.modal-open {
   max-width: 100%;
 }
 
+.section,
 p {
-  margin: 25px 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
   line-height: 1.8em;
   font-size: 1.1em;
 }
@@ -130,7 +132,6 @@ a:hover {
   @include transition(font-size .6s ease-out);
   text-align: center;
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
   font-size: 1em;
   line-height: 3.2em;

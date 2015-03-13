@@ -15,6 +15,8 @@ define(function() {
         this.$contentEl = $('#content-pane');
       }
 
+      $(window).scrollTop(0);
+
       var view = new viewClass();
 
       // id is optional, to be handled by views as necessary.

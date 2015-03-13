@@ -7,6 +7,7 @@ define(
     'views/curriculum',
     'viewmanager',
     'backbone',
+    'underscore'
   ],
   function(Home, About, Film, Community, Curriculum, ViewManager) {
 
