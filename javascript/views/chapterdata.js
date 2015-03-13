@@ -40,22 +40,6 @@ define(function() {
       thumbnailUrl: '/images/thumbs/school-system.jpeg',
       exercises: [
         {
-          title: 'HIPP: Violence Tree',
-          pageNum: '27'
-        },
-        {
-          title: 'HIPP: Restorative Justice',
-          pageNum: '29'
-        }
-      ]
-    },
-    '119062445': {
-      title: 'Drug Economy',
-      duration: '8:01',
-      content: 'This violent, illegal, industry provides <b>economic mobility</b> in low-income communities. Participants will learn to recognize the <b>root causes of violence</b> and find non-violent solutions to conflict.',
-      thumbnailUrl: '/images/thumbs/drug-economy.jpg',
-      exercises: [
-        {
           title: 'Discussion: How to be an Ally (for mentors and educators)',
           pageNum: '20'
         },
@@ -66,6 +50,22 @@ define(function() {
         {
           title: 'HIPP: Who am I?',
           pageNum: '22'
+        }
+      ]
+    },
+    '119062445': {
+      title: 'Drug Economy',
+      duration: '8:01',
+      content: 'This violent, illegal, industry provides <b>economic mobility</b> in low-income communities. Participants will learn to recognize the <b>root causes of violence</b> and find non-violent solutions to conflict.',
+      thumbnailUrl: '/images/thumbs/drug-economy.jpg',
+      exercises: [
+        {
+          title: 'HIPP: Violence Tree',
+          pageNum: '27'
+        },
+        {
+          title: 'HIPP: Restorative Justice',
+          pageNum: '29'
         }
       ]
     },
