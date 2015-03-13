@@ -35,9 +35,8 @@
 .film-description-header {
   font-weight: 300;
   font-style: italic;
-  font-size: 1.1em;
-  padding: 10px;
-  padding-bottom: 0;
+  font-size: 1.3em;
+  padding-top: 50px;
   text-align: center;
   color: $textColor;
 }
@@ -129,4 +128,8 @@
 
 a.exercise-page-num {
   color: $textColorDarker;
+}
+
+.laurels {
+  width: 100%;
 }

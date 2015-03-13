@@ -3716,7 +3716,7 @@ a:hover {
 }
 
 .king-image {
-  background-image: url('/images/king.jpg?1426208446');
+  background-image: url('/images/king.jpg?1426212028');
 }
 
 .background-overlay {
@@ -3839,9 +3839,8 @@ a:hover {
 .film-description-header {
   font-weight: 300;
   font-style: italic;
-  font-size: 1.1em;
-  padding: 10px;
-  padding-bottom: 0;
+  font-size: 1.3em;
+  padding-top: 50px;
   text-align: center;
   color: #fff;
 }
@@ -3946,6 +3945,10 @@ a:hover {
 
 a.exercise-page-num {
   color: #ddd;
+}
+
+.laurels {
+  width: 100%;
 }
 
 .bio-position {
