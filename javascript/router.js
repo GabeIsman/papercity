@@ -7,6 +7,7 @@ define(
     'views/curriculum',
     'viewmanager',
     'backbone',
+    'underscore'
   ],
   function(Home, About, Film, Community, Curriculum, ViewManager) {
 
@@ -22,6 +23,7 @@ define(
           'about': _.bind(this.viewManager.render, this, About),
           'community': _.bind(this.viewManager.render, this, Community),
           'film': _.bind(this.viewManager.render, this, Film),
+          'film/:id': _.bind(this.viewManager.render, this, Film),
           'curriculum': _.bind(this.viewManager.render, this, Curriculum),
         }, options.routes);
         this.constructor.__super__.constructor.call(this, options);

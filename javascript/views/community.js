@@ -6,33 +6,37 @@ define(
   ],
   function(FormPopup, template) {
 
-  var Community = Backbone.View.extend({
-    initialize: function() {
-      this.popup = new FormPopup();
-      this.template = _.template(template);
-    },
+    var Community = Backbone.View.extend({
+      initialize: function() {
+        this.popup = new FormPopup();
+        this.template = _.template(template);
+      },
 
-    render: function() {
-      var tumblrContent = $('.tumblr_posts')[0].outerHTML;
-      $(this.el).html(this.template({
-        tumblrContent: tumblrContent
-      }));
-      return this;
-    },
+      render: function() {
+        var tumblrPost = $('.tumblr_posts')[0];
+        var tumblrContent = '';
+        if (tumblrPost) {
+          tumblrContent = tumblrPost.outerHtml;
+        }
+        $(this.el).html(this.template({
+          tumblrContent: tumblrContent
+        }));
+        return this;
+      },
 
-    openPopup: function() {
-      this.popup.open();
-    },
+      openPopup: function() {
+        this.popup.open();
+      },
 
-    events: {
-      'click .access-link': 'openPopup',
-    },
+      events: {
+        'click .access-link': 'openPopup',
+      },
 
-    className: 'view',
+      className: 'view',
 
-    id: 'community'
+      id: 'community'
 
-  });
+    });
 
-  return Community;
+    return Community;
 });

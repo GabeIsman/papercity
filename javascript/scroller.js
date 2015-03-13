@@ -1,7 +1,8 @@
 define(
   [
     'background',
-    'rafpolyfill'
+    'rafpolyfill',
+    'underscore'
   ],
   function(BackgroundService) {
 

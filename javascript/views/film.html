@@ -12,27 +12,31 @@
   <div class="film-watch-pane container">
     <div class="film-container nine columns">
       <div class="film-inner-container">
-        <iframe id="watch-iframe" src="//player.vimeo.com/video/119016461?color=ffb728&portrait=0&title=0&byline=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="watch-iframe" src="<%= vimeoUrl %>" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-      <div class="curriculum-content">
-        <div class="film-description">
-          <header class="film-description-header">
-            This is a story of the American Dream in one of the nation’s arson capitals
-          </header>
-          <p>
-            Paper City began from interviews with middle school students who must navigate booming drug economies, struggling school systems, gang warfare, and unprecedented rates of mass incarceration in order to make it to graduation.
-          </p>
-          <p>
-            In response, a community of teachers, law officers, activists, and politicians created Paper City for youth to understand these issues and realize their power to determine the future in America.
-          </p>
-          <p>
-            Paper City is purposefully divided into 7 chapters that address specific points within the school-to-prison pipeline along with corresponding Help Increase the Peace (HIPP) lessons and activities.
-          </p>
-          <p>
-            These interactive lessons engage middle school, high school, and adult audiences
-            in active discussion about socio-economics, community empowerment, restorative justice, and the power of decision-making.
-          </p>
-        </div>
+      <div id="curriculum-content">
+        <% if (chapterContent) { %>
+          <%= chapterContent %>
+        <% } else { %>
+          <div class="film-description">
+            <header class="film-description-header">
+              This is a story of the American Dream in one of the nation’s arson capitals
+            </header>
+            <p>
+              <i>Paper City</i> began from interviews with middle school students who must navigate booming drug economies, struggling school systems, gang warfare, and unprecedented rates of mass incarceration in order to make it to graduation.
+            </p>
+            <p>
+              In response, a community of teachers, law officers, activists, and politicians created <i>Paper City</i> for youth to understand these issues and realize their power to determine the future in America.
+            </p>
+            <p>
+              <i>Paper City</i> is divided into 7 chapters that address specific points within the school-to-prison pipeline along with corresponding Help Increase the Peace (HIPP) lessons and activities.
+            </p>
+            <p>
+              These interactive lessons engage middle school, high school, and adult audiences
+              in active discussion about socio-economics, community empowerment, restorative justice, and the power of decision-making.
+            </p>
+          </div>
+        <% } %>
       </div>
       <div class="access-container">
         <a class="access-link">Don't have the password? Click here for free access</a>
@@ -40,76 +44,18 @@
     </div>
     <div class="chapters three columns">
       <ul class="chapter-list">
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119059448?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/american-dream-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">The American Dream</span>
-            <span class="chapter-duration">(3:39)</span>
-            <div class="chapter-description">
-              Through the examples of Irish and Puerto Rican immigration into Holyoke, participants will question: what is the American Dream?
+        <% _.each(chapters, function(chapter, id) { %>
+          <li class="chapter" data-video-id="<%= id %>">
+            <img src="<%= chapter.thumbnailUrl %>" class="chapter-thumbnail">
+            <div class="chapter-text">
+              <span class="chapter-title"><%= chapter.title %></span>
+              <span class="chapter-duration">(<%= chapter.duration %>)</span>
+              <div class="chapter-description">
+                <%= chapter.content %>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119060790?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/pursuit-of-happiness-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Pursuit of Happiness</span>
-            <span class="chapter-duration">(6:39)</span>
-            <div class="chapter-description">
-              In this lesson, participants will explore how they have the power to achieve the American Dream through education and social justice.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119061107?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/school-system-thumb.jpeg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">School System</span>
-            <span class="chapter-duration">(3:45)</span>
-            <div class="chapter-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119062445?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/drug-economy-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Drug Economy</span>
-            <span class="chapter-duration">(3:45)</span>
-            <div class="chapter-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119059448?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/fire-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">War on Drugs</span>
-            <span class="chapter-duration">(3:45)</span>
-            <div class="chapter-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119059448?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/fire-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Prison Industrial Complex</span>
-            <span class="chapter-duration">(3:45)</span>
-            <div class="chapter-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-url="//player.vimeo.com/video/119059448?color=ffb728&portrait=0&title=0&byline=0">
-          <img src="/papercity/images/thumbs/fire-thumb.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Chaos or Community</span>
-            <span class="chapter-duration">(3:45)</span>
-            <div class="chapter-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </div>
-        </li>
+          </li>
+        <% }); %>
       </ul>
   </div>
 </div>

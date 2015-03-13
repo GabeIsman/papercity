@@ -9,15 +9,18 @@ define(function() {
     this.$contentEl = null;
   };
 
-  ViewManager.prototype.render = function(viewClass) {
+  ViewManager.prototype.render = function(viewClass, id) {
     $(document).ready(_.bind(function() {
       if (!this.$contentEl) {
         this.$contentEl = $('#content-pane');
       }
 
+      $(window).scrollTop(0);
+
       var view = new viewClass();
 
-      this.$contentEl.html(view.render().el);
+      // id is optional, to be handled by views as necessary.
+      this.$contentEl.html(view.render(id).el);
 
       if (view.enterDocument) {
         view.enterDocument();
@@ -32,6 +35,7 @@ define(function() {
 
       window.scroller.stop();
       window.scroller.start();
+      window.stylingService.update();
     }, this));
   };
 
