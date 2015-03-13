@@ -1,6 +1,8 @@
 .info-viz {
+  position: relative;
   text-align: center;
   color: $textColorDarker;
+  padding-bottom: 30px;
 }
 
 .info-centerpiece {
@@ -35,6 +37,10 @@
   font-style: normal;
 }
 
-.info-container {
-  margin-bottom: 60px;
+.info-attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  color: $textColorDarker;
 }

@@ -3,27 +3,6 @@
   margin-top: 40px;
 }
 
-.film-container {
-  @include box-sizing(border-box);
-  display: inline-block;
-}
-
-.film-inner-container {
-  @include box-sizing(border-box);
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding-bottom: (9 / 16) * 100%;
-}
-
-.film-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .curriculum-content p {
   font-size: 0.9em;
   font-weight: 300;

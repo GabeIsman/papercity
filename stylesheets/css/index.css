@@ -3750,9 +3750,29 @@ a:hover {
   justify-content: center;
 }
 
+.film-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.film-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .info-viz {
+  position: relative;
   text-align: center;
   color: #ddd;
+  padding-bottom: 30px;
 }
 
 .info-centerpiece {
@@ -3796,38 +3816,17 @@ a:hover {
   font-style: normal;
 }
 
-.info-container {
-  margin-bottom: 60px;
+.info-attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  color: #ddd;
 }
 
 .film-watch-pane {
   position: relative;
   margin-top: 40px;
-}
-
-.film-container {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-.film-inner-container {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-
-.film-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .curriculum-content p {
