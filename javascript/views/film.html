@@ -40,76 +40,18 @@
     </div>
     <div class="chapters three columns">
       <ul class="chapter-list">
-        <li class="chapter" data-video-id="119059448">
-          <img src="/images/thumbs/american-dream.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">The American Dream</span>
-            <span class="chapter-duration">(3:39)</span>
-            <div class="chapter-description">
-              Through the examples of Irish and Puerto Rican immigration into Holyoke, participants will question: <b>what is the American Dream</b>?
+        <% _.each(chapters, function(chapter, id) { %>
+          <li class="chapter" data-video-id="<%= id %>">
+            <img src="<%= chapter.thumbnailUrl %>" class="chapter-thumbnail">
+            <div class="chapter-text">
+              <span class="chapter-title"><%= chapter.title %></span>
+              <span class="chapter-duration">(<%= chapter.duration %>)</span>
+              <div class="chapter-description">
+                <%= chapter.content %>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="119060790">
-          <img src="/images/thumbs/pursuit-of-happiness.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Pursuit of Happiness</span>
-            <span class="chapter-duration">(5:30)</span>
-            <div class="chapter-description">
-              In this lesson, participants will explore how they have the power to <b>achieve the American Dream</b> through education and social justice.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="119061107">
-          <img src="/images/thumbs/school-system.jpeg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">School System</span>
-            <span class="chapter-duration">(9:45)</span>
-            <div class="chapter-description">
-              School systems provide <b>opportunity</b> for upward mobility but suffer from socio-economic <b>disparities</b>. Here, participants will explore what it means to counteract social and economic <b>inequality</b>.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="119062445">
-          <img src="/images/thumbs/drug-economy.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Drug Economy</span>
-            <span class="chapter-duration">(8:01)</span>
-            <div class="chapter-description">
-              This violent, illegal, industry provides <b>economic mobility</b> in low-income communities. Participants will learn to recognize the <b>root causes of violence</b> and find non-violent solutions to conflict.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="120338542">
-          <img src="/images/thumbs/war-on-drugs.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">War on Drugs</span>
-            <span class="chapter-duration">(5:28)</span>
-            <div class="chapter-description">
-              Police forces are fighting America’s longest running war in low-income communities. Here, participants will explore how <b>violence</b> works through discriminatory <b>law</b>.
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="119653722">
-          <img src="/images/thumbs/prison-industrial-complex.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Prison Industrial Complex</span>
-            <span class="chapter-duration">(1:08)</span>
-            <div class="chapter-description">
-              Prisons outrank schools for public funding. With this lesson, participants will question decision-making on a larger level: <b>why is society making these choices?</b>
-            </div>
-          </div>
-        </li>
-        <li class="chapter" data-video-id="119653920">
-          <img src="/images/thumbs/chaos-or-community.jpg" class="chapter-thumbnail">
-          <div class="chapter-text">
-            <span class="chapter-title">Chaos or Community</span>
-            <span class="chapter-duration">(8:16)</span>
-            <div class="chapter-description">
-              What will you put your power towards—Chaos or Community? In this lesson, participants will recognize that <b>they each have power</b> to make choices and <b>determine the future of America</b>.
-            </div>
-          </div>
-        </li>
+          </li>
+        <% }); %>
       </ul>
   </div>
 </div>
