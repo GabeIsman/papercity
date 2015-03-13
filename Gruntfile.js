@@ -63,6 +63,16 @@ module.exports = function(grunt) {
             to: '    <script type="text/javascript" src="public/build.js"></script>'
           }
         ]
+      },
+      imageurls: {
+        src: ["javascript/views/*"],
+        overwrite: true,
+        replacements: [
+          {
+            from: /("|')\/images\/(.*)("|')/g,
+            to: "$1/papercity/images/$2$3"
+          }
+        ]
       }
     }
   });
