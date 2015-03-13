@@ -28,6 +28,7 @@ define(
         var templateData = {
           vimeoUrl: this.vimeoTemplate({ videoId: this.videoId }),
           chapters: this.chapterData,
+          chapterContent: undefined
         };
         var chapter;
         if (opt_chapterId && (chapter = this.chapterData[opt_chapterId])) {
