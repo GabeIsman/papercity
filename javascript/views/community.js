@@ -16,7 +16,7 @@ define(
         var tumblrPost = $('.tumblr_posts')[0];
         var tumblrContent = '';
         if (tumblrPost) {
-          tumblrContent = tumblrPost.outerHtml;
+          tumblrContent = tumblrPost.outerHTML;
         }
         $(this.el).html(this.template({
           tumblrContent: tumblrContent
