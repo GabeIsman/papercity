@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         replacements: [
           {
             from: /("|')\/images\/(.*)("|')/g,
-            to: "$1/papercity/images/$2$3"
+            to: "$1http://gabeisman.github.io/papercity/images/$2$3"
           }
         ]
       }
