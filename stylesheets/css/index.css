@@ -3768,6 +3768,10 @@ a:hover {
   height: 100%;
 }
 
+.info-container {
+  margin-bottom: 60px;
+}
+
 .info-viz {
   position: relative;
   text-align: center;
@@ -3967,12 +3971,12 @@ a.exercise-page-num {
   list-style: none;
   overflow-y: scroll;
   max-height: 800px;
+  margin: auto;
 }
 
 .tumblr_post img {
   float: left;
   margin: 10px;
-  margin-left: 0;
   max-width: 100% !important;
 }
 
@@ -3980,15 +3984,11 @@ a.exercise-page-num {
   overflow: hidden;
   *zoom: 1;
   font-size: 0.8em;
-  border-bottom: 1px solid #999;
-  padding: 10px 0;
+  border-bottom: 1px solid #444;
+  padding: 15px;
   margin: 30px 0 10px 0;
 }
 
-.tumblr_post:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
 .tumblr_post:first-child img {
   margin-top: 0;
 }
@@ -3996,6 +3996,14 @@ a.exercise-page-num {
 .tumblr_title {
   font-weight: bold;
   font-size: 1.1em;
+}
+
+.tumblr-section {
+  background-color: #333;
+  border-radius: 5px;
+  border: 1px solid #444;
+  margin-bottom: 60px;
+  padding: 15px 0;
 }
 
 #popup-container {
