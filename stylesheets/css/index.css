@@ -3973,7 +3973,7 @@ a.exercise-page-num {
   float: left;
   margin: 10px;
   margin-left: 0;
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .tumblr_post {
