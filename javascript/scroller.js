@@ -43,7 +43,10 @@ define(
       if (this.scrollTop < this.windowHeight) {
         var titleSpacing = this.baselineTitleSpacing - (this.scrollTop / 3);
         this.$introHeader.css({
-          'padding-top': titleSpacing + 'px',
+          'transform': 'translateY(' + titleSpacing + 'px)' ,
+          '-webkit-transform': 'translateY(' + titleSpacing + 'px)' ,
+          '-moz-transform': 'translateY(' + titleSpacing + 'px)' ,
+          '-ms-transform': 'translateY(' + titleSpacing + 'px)' ,
           'opacity': 1 - (this.scrollTop / this.windowHeight)
         });
       } else {
@@ -73,7 +76,7 @@ define(
 
     ScrollService.prototype.handleResize = function() {
       this.windowHeight = window.innerHeight;
-      this.baselineTitleSpacing = (this.windowHeight - 100) / 2;
+      this.baselineTitleSpacing = (this.windowHeight - 100) / 5;
     };
 
     function isInView($el, opt_scrollTop) {

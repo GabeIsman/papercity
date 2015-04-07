@@ -11,9 +11,6 @@ define(function() {
 
   BackgroundService.prototype.update = function() {
     var scrollTop = $(window).scrollTop();
-    if (Math.abs(this.lastScrollTop - scrollTop) < 50) {
-      return;
-    }
     this.lastScrollTop = scrollTop;
     var i;
     var $pane;
