@@ -18,8 +18,8 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'stylesheets/scss',
           cssDir: 'stylesheets/css',
-          imagesDir: 'papercity/images',
-          fontsDir: 'papercity/fonts',
+          imagesDir: 'images',
+          fontsDir: 'fonts',
           outputStyle: 'compressed',
           environment: 'production',
           force: true
@@ -63,16 +63,6 @@ module.exports = function(grunt) {
             to: '    <script type="text/javascript" src="public/build.js"></script>'
           }
         ]
-      },
-      imageurls: {
-        src: ["javascript/views/*"],
-        overwrite: true,
-        replacements: [
-          {
-            from: /("|')\/images\/(.*)("|')/g,
-            to: "$1http://gabeisman.github.io/papercity/images/$2$3"
-          }
-        ]
       }
     }
   });
@@ -83,5 +73,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.registerTask('default', ['compass:dev', 'watch']);
-  grunt.registerTask('productionize', ['compass:prod', 'replace:scriptsrc', 'replace:imageurls', 'requirejs:compile']);
+  grunt.registerTask('productionize', ['compass:prod', 'replace:scriptsrc', 'requirejs:compile']);
 };
