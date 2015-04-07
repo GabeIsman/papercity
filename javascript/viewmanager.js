@@ -33,10 +33,19 @@ define(function() {
 
       this.currentView = view;
 
+      // Send pageview
+      ga('set', 'page', this.getCanonicalUrl(view, id));
+      ga('send', 'pageview');
+
       window.scroller.stop();
       window.scroller.start();
       window.stylingService.update();
     }, this));
+  };
+
+
+  ViewManager.prototype.getCanonicalUrl = function(view, idParam) {
+    return idParam ? view.id + '/' + idParam : view.id;
   };
 
   return ViewManager;

@@ -19,12 +19,12 @@ define(
         this.viewManager = new ViewManager();
 
         options.routes = _.extend({
-          '': _.bind(this.viewManager.render, this, Home),
-          'about': _.bind(this.viewManager.render, this, About),
-          'community': _.bind(this.viewManager.render, this, Community),
-          'film': _.bind(this.viewManager.render, this, Film),
-          'film/:id': _.bind(this.viewManager.render, this, Film),
-          'curriculum': _.bind(this.viewManager.render, this, Curriculum),
+          '': _.bind(this.viewManager.render, this.viewManager, Home),
+          'about': _.bind(this.viewManager.render, this.viewManager, About),
+          'community': _.bind(this.viewManager.render, this.viewManager, Community),
+          'film': _.bind(this.viewManager.render, this.viewManager, Film),
+          'film/:id': _.bind(this.viewManager.render, this.viewManager, Film),
+          'curriculum': _.bind(this.viewManager.render, this.viewManager, Curriculum),
         }, options.routes);
         this.constructor.__super__.constructor.call(this, options);
       },
