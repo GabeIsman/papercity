@@ -36,12 +36,10 @@ a:hover {
 .intro-header {
   font-size: 2em;
   font-weight: 800;
-  /* Maybe fix this with JS? */
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 400px;
-  padding-top: 250px;
+  height: 150px;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
@@ -60,10 +58,8 @@ a:hover {
   background-color: $backgroundColor;
   width: 100%;
   padding: 50px 25px;
-}
-
-.background-spacer {
-  margin-top: 600px;
+  position: relative;
+  z-index: 1;
 }
 
 .inner-pane {
@@ -108,28 +104,20 @@ a:hover {
   width: 100%;
 }
 
-.background-container {
-  overflow: hidden;
-  z-index: -1;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
 .background {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  bottom: 0;
-/*  filter: brightness(65%);
-  -webkit-filter: brightness(65%);
-*/  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  width: 100%;
+  position: relative;
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+@media (max-width: 550px) {
+  .background {
+    padding-bottom: 100%;
+  }
 }
 
 .social-media-links {
