@@ -3550,7 +3550,7 @@ a:hover {
   width: 100%;
   position: relative;
   padding-bottom: 60%;
-  z-index: -2;
+  z-index: 0;
 }
 
 @media (max-width: 550px) {
@@ -3709,8 +3709,14 @@ a:hover {
 }
 
 .background-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background-color: #111;
   opacity: 0.5;
+  z-index: -1;
 }
 
 #page-footer {
