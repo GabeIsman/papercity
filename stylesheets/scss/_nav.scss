@@ -39,3 +39,34 @@
   float: left;
   font-weight: 800;
 }
+
+@media (max-width: 550px) {
+  .sub-nav {
+    @include transition(width 0.2s ease-out);
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    top: 60px;
+    right: 0;
+    background-color: $backgroundColor;
+    z-index: 110;
+    .nav-item {
+      display: block;
+      float: none;
+      border-top: 1px solid $borderColor;
+    }
+  }
+}
+
+.open.sub-nav {
+  width: 150px;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}

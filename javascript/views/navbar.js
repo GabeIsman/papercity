@@ -1,5 +1,7 @@
 define(
-  ['backbone'],
+  [
+    'backbone'
+  ],
   function() {
 
   var NavBar = Backbone.View.extend({
@@ -10,9 +12,25 @@ define(
     },
 
     events: {
-      'click .nav-item': function(e) {
+      'click .nav-target': function(e) {
         var href = $(e.target).data('href');
+        if (this.menuOpen) {
+          this.toggleMenu();
+        }
         window.pcRouter.navigate(href, {trigger: true});
+      },
+      'click .mobile-nav': 'toggleMenu',
+      'click .nav-overlay': 'toggleMenu'
+    },
+
+    toggleMenu: function(e) {
+      this.$('.sub-nav').toggleClass('open');
+      if (this.menuOpen) {
+        this.menuOpen = false;
+        $('.nav-overlay').remove();
+      } else {
+        this.menuOpen = true;
+        this.$el.append('<div class="nav-overlay"></div>');
       }
     },
 
