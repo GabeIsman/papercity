@@ -304,3 +304,19 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+
+.hide-for-mobile {}
+
+.hide-for-desktop {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .hide-for-mobile {
+    display: none;
+  }
+
+  .hide-for-desktop {
+    display: block;
+  }
+}

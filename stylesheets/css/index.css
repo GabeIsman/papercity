@@ -3431,6 +3431,39 @@ there.
   font-weight: 800;
 }
 
+@media (max-width: 550px) {
+  .sub-nav {
+    -moz-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
+    -webkit-transition: width 0.2s ease-out;
+    transition: width 0.2s ease-out;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    top: 60px;
+    right: 0;
+    background-color: #111;
+    z-index: 110;
+  }
+  .sub-nav .nav-item {
+    display: block;
+    float: none;
+    border-top: 1px solid #999;
+  }
+}
+.open.sub-nav {
+  width: 150px;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}
+
 body {
   color: #fff;
   background-color: #111;
@@ -3763,6 +3796,19 @@ a:hover {
   height: 100%;
 }
 
+.hide-for-desktop {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .hide-for-mobile {
+    display: none;
+  }
+
+  .hide-for-desktop {
+    display: block;
+  }
+}
 .info-caption {
   color: #FFB728;
   font-size: 1em;
