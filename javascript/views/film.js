@@ -27,12 +27,12 @@ define(
       render: function(opt_chapterId) {
         var templateData = {
           vimeoUrl: this.vimeoTemplate({ videoId: this.videoId }),
-          chapters: this.chapterData,
+          chapters: _.sortBy(_.values(this.chapterData), 'order'),
           chapterContent: undefined
         };
         var chapter;
         if (opt_chapterId && (chapter = this.chapterData[opt_chapterId])) {
-          templateData.vimeoUrl = this.vimeoTemplate({ videoId: opt_chapterId});
+          templateData.vimeoUrl = this.vimeoTemplate({ videoId: opt_chapterId });
           templateData.chapterContent = this.chapterTemplate(chapter);
         }
         $(this.el).html(this.template(templateData));

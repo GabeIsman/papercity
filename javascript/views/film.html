@@ -43,8 +43,8 @@
     </div>
     <div class="chapters three columns">
       <ul class="chapter-list">
-        <% _.each(chapters, function(chapter, id) { %>
-          <li class="chapter" data-video-id="<%= id %>">
+        <% _.each(chapters, function(chapter) { %>
+          <li class="chapter" data-video-id="<%= chapter.id %>">
             <img src="<%= chapter.thumbnailUrl %>" class="chapter-thumbnail">
             <div class="chapter-text">
               <span class="chapter-title"><%= chapter.title %></span>
