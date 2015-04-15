@@ -3718,6 +3718,7 @@ a:hover {
 }
 
 .bangobama-image {
+  background-position: 0 50px;
   background-image: url('/images/bangobama.jpg?1421728003');
 }
 
