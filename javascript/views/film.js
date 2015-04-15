@@ -60,6 +60,9 @@ define(
         $('#curriculum-content').html(this.chapterTemplate(chapterDatum));
         $('.chapter').removeClass('active');
         $currentTarget.addClass('active');
+
+        // Scroll to top of frame, useful on mobile.
+        $('body').scrollTop($('.film-pane').offset().top);
         pcRouter.navigate('film/' + videoId);
       },
 
