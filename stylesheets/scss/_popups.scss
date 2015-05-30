@@ -21,6 +21,18 @@
 
 .popup-header {
   position: relative;
+  padding: 15px 50px 0 50px;
+}
+
+.popup-title {
+  color: $highlightColor;
+  margin-bottom: 0;
+}
+
+.popup-description {
+  margin: 10px 0;
+  line-height: 1.2em;
+  color: rgb(140,140,140);
 }
 
 .popup {

@@ -12,6 +12,14 @@ define(
         return template;
       },
 
+      getTitle: function() {
+        return 'We need your help!'
+      },
+
+      getDescription: function() {
+        return 'If you are an educator, or someone passionate about social justice, we want to hear from you!';
+      },
+
       popupClass: 'form-popup',
     });
 
