@@ -10,12 +10,13 @@ define(
 
       initialize: function() {
         this.template = _.template(template);
-        this.content = this.getContent();
       },
 
       render: function() {
         $(this.el).html(this.template({
-          body: this.content,
+          body: this.getContent(),
+          title: this.getTitle(),
+          description: this.getDescription(),
           popupClass: this.popupClass
         }));
         this.recenter();
@@ -40,6 +41,10 @@ define(
 
       // To be overridden
       getContent: function() {},
+
+      getTitle: function() {},
+
+      getDescription: function() {},
 
       open: function() {
         $(this.el).css({

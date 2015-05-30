@@ -3697,6 +3697,12 @@ a:hover {
   box-shadow: -2px -2px 2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px 1px rgba(255, 255, 255, 0.1);
 }
 
+a.addendum-link {
+  font-style: italic;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
 .image-container:hover > .caption {
   background-color: #111;
 }
@@ -4026,6 +4032,18 @@ a.exercise-page-num {
 
 .popup-header {
   position: relative;
+  padding: 15px 50px 0 50px;
+}
+
+.popup-title {
+  color: #FFB728;
+  margin-bottom: 0;
+}
+
+.popup-description {
+  margin: 10px 0;
+  line-height: 1.2em;
+  color: #8c8c8c;
 }
 
 .popup {

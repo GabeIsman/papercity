@@ -1,6 +1,10 @@
 <div class="popup-overlay"></div>
 <div class="popup <%= popupClass %>">
-  <i class="popup-exit fa fa-times"></i>
+  <header class="popup-header">
+    <h5 class="popup-title"><%= title %></h5>
+    <p class="popup-description"><%= description %></p>
+    <i class="popup-exit fa fa-times"></i>
+  </header>
   <div class="popup-content">
     <%= body %>
   </div>
