@@ -4009,6 +4009,10 @@ a.exercise-page-num {
   padding: 15px 0;
 }
 
+.map-container {
+  margin-bottom: 35px;
+}
+
 #popup-container {
   display: none;
   z-index: 1000;
