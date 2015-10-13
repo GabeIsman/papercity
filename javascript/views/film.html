@@ -12,6 +12,9 @@
       <div class="film-container">
         <iframe id="watch-iframe" src="<%= vimeoUrl %>" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
+      <div class="access-container">
+        <a class="access-link">Don't have the password? Click here for free access</a>
+      </div>
       <div id="curriculum-content">
         <% if (chapterContent) { %>
           <%= chapterContent %>
@@ -36,9 +39,6 @@
             </p>
           </div>
         <% } %>
-      </div>
-      <div class="access-container">
-        <a class="access-link">Don't have the password? Click here for free access</a>
       </div>
     </div>
     <div class="chapters three columns">
